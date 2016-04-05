@@ -1,0 +1,40 @@
+<h1>Choose some writing to work on</h1>
+
+	<div class="form-group bigger">
+        <div class="radio">
+            <label>
+                <input type="radio" name="easyRegular" value="easy" ng-model="formData.easyRegular">
+                Easy
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="easyRegular" value="regular" ng-model="formData.easyRegular">
+                Regular
+            </label>
+        </div>
+    </div>
+
+<h2>Enter a keyword to search for academic abstracts. In the 'Easy' version you can see where the errors are. In the 'Regular' version, there will be no placeholders to show where the articles have been deleted</h2>
+
+<div class="homeScreen">
+    <input type="button" class="btn btn-success col-sm-4" value="Back to Home" ng-click="goToHome()"></input>
+</div>
+<br>
+
+<div class="searching">
+    <p>Enter a search term to work on abstracts in that area</p>
+    <form ng-submit="getAbstracts()">
+        <input type="text" placeholder="example: finance" name="text" ng-model="formData.text" />
+        <input type="submit" id="submit" value="Search" />
+    </form>
+</div>
+
+
+<ul>
+	<li class="abstract" ng-show='placeholder = 1' ng-repeat='abstract in abstracts track by $index'>
+		<a href="/#/academic/{{formData.easyRegular}}/{{abstract.summary[0] | unders}}">
+			{{abstract.title[0]}}
+		</a>
+	</li>
+</ul>

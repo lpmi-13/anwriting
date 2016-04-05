@@ -1,0 +1,217 @@
+header {
+  font-family: 'Quicksand';
+  color: #e6dae1;
+  padding: 5px 2px;
+  font-size: 25px;
+  text-align: center;
+  background-color: #104E8B;
+  border-bottom: 1px solid #c42700;
+  text-shadow: 0px -1px 0px #c42700;
+}
+
+body {
+/*  font-family: 'Georgia';
+  font-size: 20px;*/
+  background-color: #0099cc;
+  color: #444;
+}
+
+a {
+  color: #ffffff;
+}
+
+.res {
+  color: #e6dae1;
+  margin: 30px 0px 30px 0px;
+  padding: 5px;
+  font-size: 22px;
+  list-style-type: none;
+  list-style-position: left;
+  text-align: left;
+  background-color: #104E8B;
+  border-radius: 10px;
+  overflow: auto;
+  width: 100%;
+}
+
+#boom {
+  display: none;
+}
+
+.story {
+  color: #e6dae1;
+  margin: 0;
+  padding: 5px;
+  font-size: 1.4em;
+ /* list-style-type: none;
+  list-style-position: left;*/
+  text-align: justify;
+  background-color: transparent;
+  color: black;
+  border-radius: 10px;
+  overflow: auto;
+  position: absolute;
+}
+
+.smallZ {
+  margin: 0;
+  padding: 5px;
+  border-radius: 10px;
+  overflow: auto;
+  resize: none;
+  /*list-style-type: none;
+  list-style-position: left;*/
+  text-align: justify;
+  z-index: 1;
+  background-color: white;
+  color: transparent;
+  position: absolute;
+  font-size: 1.4em;
+  white-space: pre-wrap;
+}
+
+textarea {
+  resize: none;
+  transition: 0.05s;
+  -moz-transition: 0.05s;
+  -webkit-transition: 0.05s;
+  -o-transition: 0.05s;
+  margin: 0;
+  padding: 5px;
+  border-radius: 10px;
+  color: black;
+  background-color: transparent;
+  position: absolute;
+  font-size: 1.4em;
+  z-index: 2;
+  white-space: pre-wrap;
+  text-align:justify;
+ }
+
+ .backdrop {
+  position: absolute;
+  z-index: 1;
+  border: 2px solid #685972;
+  background-color: #fff;
+  margin:0;
+  border-radius: 0;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  transform: translateZ(0);
+  -webkit-text-size-adjust: none;
+}
+
+.bigger {
+  font-size: 2em;
+ }
+
+ .sides {
+  float: left;
+  margin: 5px 5px 5px 5px;
+  color: #E0FFFF;
+ }
+
+ .spacer {
+  position: fixed;
+  top: 10px;
+  z-index: 3;
+}
+
+.check {
+  font-size: 22px;
+  border-radius: 10px;
+}
+
+.hint {
+  font-size: 22px;
+  border-radius: 10px;
+}
+
+.back {
+  font-size: 22px;
+  border-radius: 10px;
+}
+
+.json {
+  margin: 25px;
+}
+
+.prompt {
+  font-size: 25px;
+  margin: 65px 0 0 0;
+}
+/*
+.bigZ {
+  z-index: 2;
+  background-color: transparent;
+  position: absolute;
+}*/
+
+.hl {
+  color: green;
+  background-color: red;
+}
+
+/**********************************************************
+below is the academic CSS
+**********************************************************/
+
+.searching {
+  margin: 35px;
+}
+
+.abstract {
+  font-size: 35px;
+  margin: 35px;
+}
+
+.summary {
+  color: #e6dae1;
+  margin: 0;
+  padding: 5px;
+  font-size: 1.4em;
+ /* list-style-type: none;
+  list-style-position: left;*/
+  text-align: justify;
+  background-color: transparent;
+  color: black;
+  border-radius: 10px;
+  overflow: auto;
+  position: absolute;
+}
+
+
+/**********************************************************
+below is the business CSS
+**********************************************************/
+
+.headline {
+  font-size: 35px;
+  margin: 35px;
+}
+
+.article {
+  color: #e6dae1;
+  margin: 0;
+  padding: 5px;
+  font-size: 1.4em;
+ /* list-style-type: none;
+  list-style-position: left;*/
+  text-align: justify;
+  background-color: transparent;
+  color: black;
+  border-radius: 10px;
+  overflow: auto;
+  position: absolute;
+}
+
+.homeScreen {
+  margin: 35px;
+}
+
+.list {
+  margin: 35px;
+}

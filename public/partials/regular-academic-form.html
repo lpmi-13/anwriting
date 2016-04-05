@@ -1,0 +1,30 @@
+<div class="jumbotron">
+	<h1>Revise some writing</h1>
+	<p>Revise this abstract by adding in the missing articles (a/an/the), and then click on "check" to see how you did. "Hint" shows you the singular/countable Nouns, near where the missing articles are likely to be located...</p>
+</div>
+
+
+<div growl></div>
+
+
+<form>
+
+		<div class="form-group">
+			<textarea msd-elastic class="form-control summary" ng-model="amendedSummary" ></textarea>
+			<div msd-elastic ng-model="summary_highlights" class="smallZ" ng-bind-html="summary_highlights">
+	  			{{summary_highlights}}
+	  		</div>
+		</div>
+
+
+		<div class="container spacer">
+			<div class="row row-centered">	
+				<input type="button" class="btn btn-info check col-sm-4" value="Check" ng-click="check()"></input>
+			
+				<input type="button" class="btn btn-success hint col-sm-4" value="Get a Hint" ng-click="getHint()"></input>
+
+				<input type="button" class="btn btn-danger back col-sm-4" value="Back to Titles" ng-click="goToTitles()"></input>
+			</div>
+
+		</div>
+</form>

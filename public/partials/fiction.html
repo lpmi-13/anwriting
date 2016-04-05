@@ -1,0 +1,35 @@
+<h1>Choose some writing to work on</h1>
+
+<!-- <p>Would you like the easy version or the difficult version?</p> -->
+
+	<div class="form-group bigger">
+        <div class="radio">
+            <label>
+                <input type="radio" name="easyRegular" value="easy" ng-model="formData.easyRegular">
+                Easy
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="easyRegular" value="regular" ng-model="formData.easyRegular">
+                Regular
+            </label>
+        </div>
+    </div>
+
+<h2>These are current Writing Prompts from Reddit's 'writingprompts' subreddit. In 'Easy' version, you can see where the errors are. In the 'Regular' version, there will be no placeholders to show where the articles have been deleted</h2>
+
+<div class="homeScreen">
+    <input type="button" class="btn btn-success col-sm-4" value="Back to Home" ng-click="goToHome()"></input>
+</div>
+<br>
+
+<ul>
+	<li class="prompt" ng-show='placeholder = 1' ng-repeat='prompt in redditTitles track by $index'>
+		<a href="/#/fiction/{{formData.easyRegular}}/{{prompt[1]}}">
+			{{prompt[0]}}
+		</a>
+	</li>
+</ul>
+
+

@@ -1,0 +1,30 @@
+<h1>Choose some writing to work on</h1>
+
+	<div class="form-group bigger">
+        <div class="radio">
+            <label>
+                <input type="radio" name="easyRegular" value="easy" ng-model="formData.easyRegular">
+                Easy
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="easyRegular" value="regular" ng-model="formData.easyRegular">
+                Regular
+            </label>
+        </div>
+    </div>
+
+<h2>These are business articles from today, click on one to practice revising articles. In the 'Easy' version you can see where the errors are. In the 'Regular' version, there will be no placeholders to show where the articles have been deleted</h2>
+
+<div class="homeScreen">
+    <input type="button" class="btn btn-success col-sm-4" value="Back to Home" ng-click="goToHome()"></input>
+</div>
+<br>
+<ul class="list">
+	<li class="headline" ng-show='placeholder = 1' ng-repeat='article in articles track by $index'>
+		<a href="/#/business/{{formData.easyRegular}}{{article.href}}">
+			{{article.text}}
+		</a>
+	</li>
+</ul>

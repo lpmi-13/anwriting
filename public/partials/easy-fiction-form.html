@@ -1,0 +1,29 @@
+<div class="jumbotron">
+	<h1>Revise some writing</h1>
+	<p>Revise this story by putting articles (a/an/the) where the asterisks (***) are, and then click on "Check" to see how you did. "Hint" shows you your progress.</p>
+</div>
+
+
+<div growl></div>
+
+<form>
+
+		<div class="form-group">
+			<textarea msd-elastic class="form-control story" ng-model="amendedStory" ></textarea>
+			<div msd-elastic ng-model="story_highlights" class="smallZ" ng-bind-html="story_highlights">
+	  			{{story_highlights}}
+	  		</div>
+		</div>
+
+
+		<div class="container spacer">
+			<div class="row row-centered">	
+				<input type="button" class="btn btn-info check col-sm-4" value="Check" ng-click="check()"></input>
+			
+				<input type="button" class="btn btn-success hint col-sm-4" value="Get a Hint" ng-click="getHint()"></input>
+
+				<input type="button" class="btn btn-danger back col-sm-4" value="Back to Stories" ng-click="goToStories()"></input>
+			</div>
+
+		</div>
+</form>
