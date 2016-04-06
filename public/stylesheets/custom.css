@@ -123,16 +123,19 @@ textarea {
 .check {
   font-size: 22px;
   border-radius: 10px;
+  width: 30%;
 }
 
 .hint {
   font-size: 22px;
   border-radius: 10px;
+  width: 30%;
 }
 
 .back {
   font-size: 22px;
   border-radius: 10px;
+  width: 30%;
 }
 
 .json {
