@@ -121,21 +121,18 @@ textarea {
 }
 
 .check {
-  font-size: 22px;
+  font-size: 1.2em;
   border-radius: 10px;
-  width: 30%;
 }
 
 .hint {
-  font-size: 22px;
+  font-size: 1.2em;
   border-radius: 10px;
-  width: 30%;
 }
 
 .back {
-  font-size: 22px;
+  font-size: 1.2em;
   border-radius: 10px;
-  width: 30%;
 }
 
 .json {
@@ -167,8 +164,8 @@ below is the academic CSS
 }
 
 .abstract {
-  font-size: 35px;
-  margin: 35px;
+  font-size: 20px;
+  margin: 20px;
 }
 
 .summary {
@@ -192,8 +189,8 @@ below is the business CSS
 **********************************************************/
 
 .headline {
-  font-size: 35px;
-  margin: 35px;
+  font-size: 1.2em;
+  margin: 20px;
 }
 
 .article {
