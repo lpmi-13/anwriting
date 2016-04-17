@@ -1,4 +1,4 @@
-var app = angular.module('Redzy', ['ngResource', 'ngRoute', 'monospaced.elastic', 'angular-growl', 'ngSanitize', 'underscoreFilter']);
+var app = angular.module('Grammarbuffet', ['ngResource', 'ngRoute', 'monospaced.elastic', 'angular-growl', 'ngSanitize', 'underscoreFilter']);
 
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
