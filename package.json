@@ -26,6 +26,10 @@
     "grunt-contrib-watch": "~1.0.0",
     "grunt-contrib-uglify": "~1.0.1",
     "grunt-contrib-concat": "~1.0.0",
-    "uglify-js": "~2.6.2"
+    "uglify-js": "~2.6.2",
+    "gulp": "~3.9.1",
+    "gulp-uglify": "~1.5.3",
+    "gulp-concat": "~2.6.0",
+    "gulp-rename": "~1.2.2"
   }
 }
