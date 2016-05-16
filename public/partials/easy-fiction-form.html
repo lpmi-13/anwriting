@@ -1,12 +1,27 @@
-<div class="jumbotron">
-	<h1>Revise some writing</h1>
-	<p>Revise this story by putting articles (a/an/the) where the asterisks (***) are, and then click on "Check" to see how you did. "Get a Hint" shows you your progress.</p>
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	
+	<div class="navbar-header">	
+	
+		<button type="button" class="btn btn-default btn-lg navbar-btn" ng-click="goToHome()">
+            <span class="glyphicon glyphicon-home"></span>
+        </button>
+        
+		<input type="button" class="btn btn-default btn-lg navbar-btn" value="Check" ng-click="check()"></input>
+	
+		<input type="button" class="btn btn-default btn-lg navbar-btn" value="Get a Hint" ng-click="getHint()"></input>
+
+		<input type="button" class="btn btn-default btn-lg navbar-btn" value="Back to Stories" ng-click="goToStories()"></input>
+	
+	</div>
+
 </div>
 
+<div class="container">
+	
+	<h1>Revise this story by putting articles (a/an/the) where the asterisks (***) are, and then click on "Check" to see how you did. "Get a Hint" shows you your progress.</h1>
+	
 
-<div growl></div>
-
-<form>
+	<form>
 
 		<div class="form-group">
 			<textarea msd-elastic class="form-control story" ng-model="amendedStory" ></textarea>
@@ -15,15 +30,9 @@
 	  		</div>
 		</div>
 
+	</form>
 
-		<div class="container spacer">
-			<div class="row row-centered">	
-				<input type="button" class="btn btn-info check col-sm-4" value="Check" ng-click="check()"></input>
-			
-				<input type="button" class="btn btn-success hint col-sm-4" value="Get a Hint" ng-click="getHint()"></input>
 
-				<input type="button" class="btn btn-danger back col-sm-4" value="Back to Stories" ng-click="goToStories()"></input>
-			</div>
+</div>
 
-		</div>
-</form>
+<div growl></div>

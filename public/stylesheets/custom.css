@@ -1,24 +1,62 @@
-header {
-  font-family: 'Quicksand';
-  color: #e6dae1;
-  padding: 5px 2px;
-  font-size: 25px;
-  text-align: center;
-  background-color: #104E8B;
-  border-bottom: 1px solid #c42700;
-  text-shadow: 0px -1px 0px #c42700;
+
+#overlay {
+    position: fixed;
+    left: 25%;
+    top: 25%;
+    padding: 25px;
+    border: 2px solid black;
+    background-color: #ffffff;
+    width: 50%;
+    height: 50%;
+    z-index: 100;
+}
+#fade {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    background-color: black;
+    -moz-opacity: 0.7;
+    opacity: .70;
+    filter: alpha(opacity=70);
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+}
+
+#custom-modal.ng-enter {
+  transition: opacity .5s ease-out;
+  opacity: 0;
+}
+#custom-modal.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+#custom-modal.ng-leave {
+  transition: opacity .5s ease-out;
+  opacity: 1;
+}
+#custom-modal.ng-leave.ng-leave-active {
+  opacity: 0;
 }
 
 body {
-/*  font-family: 'Georgia';
-  font-size: 20px;*/
-  background-color: #0099cc;
+  font-family: Georgia;
+  padding-top: 70px;
+  background-color: #A8CCFF;
   color: #444;
 }
 
-a {
-  color: #ffffff;
+.navbar-header {
+  margin-left: 10px;
 }
+
+/*.btn-custom {
+  margin : 5%;
+  height : auto;
+  width : auto;
+  border-radius: 20px;
+  background-color: #87DEAF;
+  font-size: 4em;
+}*/
 
 .res {
   color: #e6dae1;
@@ -140,32 +178,22 @@ textarea {
 }
 
 .prompt {
-  font-size: 1.2em;
+  color : black;
+  background-color: white;
+  font-size: 1.5em;
   margin: 20px;
 }
-/*
-.bigZ {
-  z-index: 2;
-  background-color: transparent;
-  position: absolute;
-}*/
 
-.hl {
-  color: green;
-  background-color: red;
-}
+
+
 
 /**********************************************************
 below is the academic CSS
 **********************************************************/
 
 .searching {
-  margin: 35px;
-}
-
-.abstract {
-  font-size: 20px;
-  margin: 20px;
+  font-size: 1.4em;
+  margin: 15px;
 }
 
 .summary {

@@ -1,4 +1,4 @@
-var app = angular.module('Grammarbuffet', ['ngResource', 'ngRoute', 'monospaced.elastic', 'angular-growl', 'ngSanitize', 'underscoreFilter']);
+var app = angular.module('Grammarbuffet', ['ngResource', 'ngRoute', 'monospaced.elastic', 'angular-growl', 'ngSanitize', 'escaper', 'angularModalService']);
 
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
@@ -71,12 +71,21 @@ app.factory('ArticleList', function($resource) {
 
 app.factory('Article', function($resource) {
     return $resource('/article/:url', {cache : true});
-})
+});
 
+app.controller('ModalController', ['$scope', 'close', function($scope, close) {
 
-app.controller('HomeCtrl', ['$scope', '$resource', '$location', 'StoryList', '$sce',
-	function ($scope, $resource, $location, StoryList, $sce) {
+  $scope.close = close;
+
+}]);
+
+app.controller('HomeCtrl', ['$scope', '$location',
+	function ($scope, $location) {
 		
+            $scope.goToHome = function() {
+                $location.path('/');
+            }
+
             $scope.goToBusiness = function() {
                 $location.path('/business');
             }
@@ -94,6 +103,23 @@ app.controller('HomeCtrl', ['$scope', '$resource', '$location', 'StoryList', '$s
 
 app.controller('FictionCtrl', ['$scope', '$resource', 'promptService', '$location',
     function ($scope, $resource, promptService, $location) {
+
+            $scope.goToHome = function() {
+                $location.path('/');
+            }
+
+            $scope.goToBusiness = function() {
+                $location.path('/business');
+            }
+
+            $scope.goToAcademic = function() {
+                $location.path('/academic');
+            }
+
+            $scope.goToFiction = function() {
+                $location.path('/fiction');
+            }
+
 
         $scope.placeholder = 0;
 
@@ -151,16 +177,47 @@ app.controller('FictionCtrl', ['$scope', '$resource', 'promptService', '$locatio
             //set values for radio buttons
             $scope.formData = {};
             $scope.formData.easyRegular = 'easy';
-
-            $scope.goToHome = function() {
-                $location.path('/');
-            } 
             
 }]);
 
-app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl', 'StoryList', '$sce', 
-    function ($scope, $location, $routeParams, growl, StoryList, $sce) {
+app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl', 'StoryList', '$sce', 'ModalService', 
+    function ($scope, $location, $routeParams, growl, StoryList, $sce, ModalService) {
        
+            $scope.goToHome = function() {
+                $location.path('/');
+            }
+
+            $scope.goToBusiness = function() {
+                $location.path('/business');
+            }
+
+            $scope.goToAcademic = function() {
+                $location.path('/academic');
+            }
+
+            $scope.goToFiction = function() {
+                $location.path('/fiction');
+            }
+
+            $scope.showModal = function() {
+
+                // Just provide a template url, a controller and call 'showModal'.
+                ModalService.showModal({
+                  templateUrl: "partials/modal.html",
+                  controller: "ModalController"
+                }).then(function(modal) {
+                  // The modal object has the element built, if this is a bootstrap modal
+                  // you can call 'modal' to show it, if it's a custom modal just show or hide
+                  // it as you need to.
+                  modal.element.modal();
+                  modal.close.then(function(result) {
+                    $scope.message = result ? "You said Yes" : "You said No";
+                  });
+                });
+
+              };
+
+
          
         var id = $routeParams.id;
         var url = $routeParams.url;
@@ -268,6 +325,22 @@ app.controller('RegularFictionCtrl', ['$scope', '$resource', '$location', '$rout
         var id = $routeParams.id;
         var url = $routeParams.url;
 
+            $scope.goToHome = function() {
+                $location.path('/');
+            }
+
+            $scope.goToBusiness = function() {
+                $location.path('/business');
+            }
+
+            $scope.goToAcademic = function() {
+                $location.path('/academic');
+            }
+
+            $scope.goToFiction = function() {
+                $location.path('/fiction');
+            }
+
         $scope.story = "LOADING STORY...";
 
         $scope.amendedStory = "LOADING STORY..."
@@ -335,7 +408,7 @@ app.controller('RegularFictionCtrl', ['$scope', '$resource', '$location', '$rout
                     growl.warning('...OOPS!', {title: 'We have too many A\'s'});
                 }
             } else {
-                growl.success('SUCCESS!!!', {title: 'Nice Work, you added in all the A\'s!!!'});
+                growl.success('SUCCESS!!!', {title: 'Nice Work, we have all the A\'s!!!'});
             }
 
             if (countAn(storyArray) !== countAn(amendedArray)){ 
@@ -345,7 +418,7 @@ app.controller('RegularFictionCtrl', ['$scope', '$resource', '$location', '$rout
                     growl.warning('...OOPS!', {title: 'We have too many An\'s'});
                 }
             } else {
-                growl.success('SUCCESS!!!', {title: 'Nice Work, you added in all the An\'s!!!'});
+                growl.success('SUCCESS!!!', {title: 'Nice Work, we have all the An\'s!!!'});
             }
 
             if (countThe(storyArray) !== countThe(amendedArray)){ 
@@ -355,7 +428,7 @@ app.controller('RegularFictionCtrl', ['$scope', '$resource', '$location', '$rout
                     growl.warning('...OOPS!', {title: 'We have too many The\'s'});
                 }
             } else {
-                growl.success('SUCCESS!!!', {title: 'Nice Work, you added in all the The\'s!!!'});
+                growl.success('SUCCESS!!!', {title: 'Nice Work, we have all the The\'s!!!'});
             }
         }
 
@@ -411,6 +484,22 @@ app.controller('RegularFictionCtrl', ['$scope', '$resource', '$location', '$rout
 app.controller('AcademicCtrl', ['$scope', '$resource', 'AbstractList', '$routeParams', '$location',
     function ($scope, $resource, AbstractList, $routeParams, $location) {
 
+            $scope.goToHome = function() {
+                $location.path('/');
+            }
+
+            $scope.goToBusiness = function() {
+                $location.path('/business');
+            }
+
+            $scope.goToAcademic = function() {
+                $location.path('/academic');
+            }
+
+            $scope.goToFiction = function() {
+                $location.path('/fiction');
+            }
+
         var term = $scope.text;
         $scope.formData = {};
 
@@ -427,17 +516,30 @@ app.controller('AcademicCtrl', ['$scope', '$resource', 'AbstractList', '$routePa
         }
 
             $scope.formData.easyRegular = 'easy';
-
-            $scope.goToHome = function() {
-            $location.path('/');
-        } 
             
 }]);
 
 app.controller('EasyAcademicCtrl', ['$scope', '$location', '$routeParams', 'growl', '$sce', 
     function ($scope, $location, $routeParams, growl, $sce) {
        
-         
+            $scope.goToHome = function() {
+                $location.path('/');
+            }
+
+            $scope.goToBusiness = function() {
+                $location.path('/business');
+            }
+
+            $scope.goToAcademic = function() {
+                $location.path('/academic');
+            }
+
+            $scope.goToFiction = function() {
+                $location.path('/fiction');
+            }
+
+        // var escaped = $sce.trustAsHtml($routeParams.summary);
+
         var summary = $routeParams.summary.replace(/_/g, ' ');
 
         summary = summary.trimLeft();
@@ -449,7 +551,6 @@ app.controller('EasyAcademicCtrl', ['$scope', '$location', '$routeParams', 'grow
                                 .replace(/ a /gi, ' *** ')
                                 .replace(/ an /gi, ' *** ');
         
-
         $scope.summary_highlights = summary;
 
         $scope.check = function() {
@@ -525,8 +626,24 @@ app.controller('EasyAcademicCtrl', ['$scope', '$location', '$routeParams', 'grow
 
 app.controller('RegularAcademicCtrl', ['$scope', '$resource', '$location', '$routeParams', 'growl', '$sce', 
     function ($scope, $resource, $location, $routeParams, growl, $sce) {
-    
- var summary = $routeParams.summary.replace(/_/g, ' ');
+  
+            $scope.goToHome = function() {
+                $location.path('/');
+            }
+
+            $scope.goToBusiness = function() {
+                $location.path('/business');
+            }
+
+            $scope.goToAcademic = function() {
+                $location.path('/academic');
+            }
+
+            $scope.goToFiction = function() {
+                $location.path('/fiction');
+            }
+
+        var summary = $routeParams.summary.replace(/_/g, ' ');
 
         summary = summary.trimLeft();
 
@@ -587,7 +704,7 @@ app.controller('RegularAcademicCtrl', ['$scope', '$resource', '$location', '$rou
                     growl.warning('...OOPS!', {title: 'We have too many A\'s'});
                 }
             } else {
-                growl.success('SUCCESS!!!', {title: 'Nice Work, you added in all the A\'s!!!'});
+                growl.success('SUCCESS!!!', {title: 'Nice Work, we have all the A\'s!!!'});
             }
 
             if (countAn(summaryArray) !== countAn(amendedArray)){ 
@@ -597,7 +714,7 @@ app.controller('RegularAcademicCtrl', ['$scope', '$resource', '$location', '$rou
                     growl.warning('...OOPS!', {title: 'We have too many An\'s'});
                 }
             } else {
-                growl.success('SUCCESS!!!', {title: 'Nice Work, you added in all the An\'s!!!'});
+                growl.success('SUCCESS!!!', {title: 'Nice Work, we have all the An\'s!!!'});
             }
 
             if (countThe(summaryArray) !== countThe(amendedArray)){ 
@@ -607,7 +724,7 @@ app.controller('RegularAcademicCtrl', ['$scope', '$resource', '$location', '$rou
                     growl.warning('...OOPS!', {title: 'We have too many The\'s'});
                 }
             } else {
-                growl.success('SUCCESS!!!', {title: 'Nice Work, you added in all the The\'s!!!'});
+                growl.success('SUCCESS!!!', {title: 'Nice Work, we have all the The\'s!!!'});
             }
         }
 
@@ -664,6 +781,22 @@ app.controller('RegularAcademicCtrl', ['$scope', '$resource', '$location', '$rou
 app.controller('BusinessCtrl', ['$scope', '$resource', 'ArticleList', '$location',
     function ($scope, $resource, ArticleList, $location) {
 
+            $scope.goToHome = function() {
+                $location.path('/');
+            }
+
+            $scope.goToBusiness = function() {
+                $location.path('/business');
+            }
+
+            $scope.goToAcademic = function() {
+                $location.path('/academic');
+            }
+
+            $scope.goToFiction = function() {
+                $location.path('/fiction');
+            }
+
         ArticleList.query(function(response) {
             var rawArray = response;
 
@@ -676,16 +809,29 @@ app.controller('BusinessCtrl', ['$scope', '$resource', 'ArticleList', '$location
             //set values for radio buttons
             $scope.formData = {};
             $scope.formData.easyRegular = 'easy';
-
-            $scope.goToHome = function() {
-                $location.path('/');
-            }             
+            
 }]);
 
 
 app.controller('EasyBusinessCtrl', ['$scope', '$location', '$routeParams', 'growl', 'Article', '$sce', 
     function ($scope, $location, $routeParams, growl, Article, $sce) {
-          
+        
+            $scope.goToHome = function() {
+                $location.path('/');
+            }
+
+            $scope.goToBusiness = function() {
+                $location.path('/business');
+            }
+
+            $scope.goToAcademic = function() {
+                $location.path('/academic');
+            }
+
+            $scope.goToFiction = function() {
+                $location.path('/fiction');
+            }
+
         var url = $routeParams.url;
 
         $scope.amendedArticle = "LOADING STORY..."
@@ -779,6 +925,22 @@ app.controller('EasyBusinessCtrl', ['$scope', '$location', '$routeParams', 'grow
 app.controller('RegularBusinessCtrl', ['$scope', '$resource', '$location', '$routeParams', 'growl', 'Article', '$sce', 
     function ($scope, $resource, $location, $routeParams, growl, Article, $sce) {
        
+            $scope.goToHome = function() {
+                $location.path('/');
+            }
+
+            $scope.goToBusiness = function() {
+                $location.path('/business');
+            }
+
+            $scope.goToAcademic = function() {
+                $location.path('/academic');
+            }
+
+            $scope.goToFiction = function() {
+                $location.path('/fiction');
+            }
+
         var url = $routeParams.url;
 
         $scope.amendedArticle = "LOADING STORY...";
@@ -846,7 +1008,7 @@ app.controller('RegularBusinessCtrl', ['$scope', '$resource', '$location', '$rou
                     growl.warning('...OOPS!', {title: 'We have too many A\'s'});
                 }
             } else {
-                growl.success('SUCCESS!!!', {title: 'Nice Work, you added in all the A\'s!!!'});
+                growl.success('SUCCESS!!!', {title: 'Nice Work, we have all the A\'s!!!'});
             }
 
             if (countAn(articleArray) !== countAn(amendedArray)){ 
@@ -856,7 +1018,7 @@ app.controller('RegularBusinessCtrl', ['$scope', '$resource', '$location', '$rou
                     growl.warning('...OOPS!', {title: 'We have too many An\'s'});
                 }
             } else {
-                growl.success('SUCCESS!!!', {title: 'Nice Work, you added in all the An\'s!!!'});
+                growl.success('SUCCESS!!!', {title: 'Nice Work, we have all the An\'s!!!'});
             }
 
             if (countThe(articleArray) !== countThe(amendedArray)){ 
@@ -866,7 +1028,7 @@ app.controller('RegularBusinessCtrl', ['$scope', '$resource', '$location', '$rou
                     growl.warning('...OOPS!', {title: 'We have too many The\'s'});
                 }
             } else {
-                growl.success('SUCCESS!!!', {title: 'Nice Work, you added in all the The\'s!!!'});
+                growl.success('SUCCESS!!!', {title: 'Nice Work, we have all the The\'s!!!'});
             }
         }
 

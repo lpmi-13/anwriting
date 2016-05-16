@@ -1,6 +1,20 @@
-<h1>Choose some writing to work on</h1>
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="navbar-header">  
+        
+        <button type="button" class="btn btn-default btn-lg navbar-btn" ng-click="goToHome()">
+            <span class="glyphicon glyphicon-home"></span>
+        </button>
 
-<!-- <p>Would you like the easy version or the difficult version?</p> -->
+        <input type="button" class="btn btn-default btn-lg navbar-btn" value="Business Writing" ng-click="goToBusiness()"></input>
+    
+        <input type="button" class="btn btn-default btn-lg navbar-btn" value="Academic Writing" ng-click="goToAcademic()"></input>
+
+        <input type="button" class="btn btn-default btn-lg navbar-btn" value="Fiction Writing" ng-click="goToFiction()"></input>
+    </div>
+</div>
+
+<div class="container">
+<h1>Choose some Fiction writing to work on</h1>
 
 	<div class="form-group bigger">
         <div class="radio">
@@ -19,17 +33,12 @@
 
 <h2>These are current Writing Prompts from Reddit's 'writingprompts' subreddit. In 'Easy' version, you can see where the errors are. In the 'Regular' version, there will be no placeholders to show where the articles have been deleted</h2>
 
-<div class="homeScreen">
-    <input type="button" class="btn btn-success col-sm-4" value="Back to Home" ng-click="goToHome()"></input>
-</div>
-<br>
-
-<ul>
-	<li class="prompt" ng-show='placeholder = 1' ng-repeat='prompt in redditTitles track by $index'>
+<ul class="list-group">
+	<li class="prompt list-group-item" ng-show='placeholder = 1' ng-repeat='prompt in redditTitles track by $index'>
 		<a href="/#/fiction/{{formData.easyRegular}}/{{prompt[1]}}">
 			{{prompt[0]}}
 		</a>
 	</li>
 </ul>
-
-
+<h3>All Fiction stories are from <a href="http://www.reddit.com/r/writingprompts">www.reddit.com/r/writingprompts</a></h3>
+</div>

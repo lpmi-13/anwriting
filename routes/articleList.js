@@ -9,7 +9,6 @@ router.get('/', function(req, res) {
     request('http://bbc.co.uk/news/business/',
         function(error, response, body) {
             if (!error) {
-                console.log('we got a response!');
                 $ = cheerio.load(body);
 
                 var hrefArray = [];
