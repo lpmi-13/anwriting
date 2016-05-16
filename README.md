@@ -12,17 +12,15 @@ they are missing (in "Regular" mode).
 
 Directions for future development
 
--Fix issues passing Academic texts via URLs (format the strings in the short-term, retrieving these from a DB would be a better long-term solution)
+-Fix issues passing Academic texts via URLs (retrieving these from a DB as a long-term solution)
 
 -Add functionality to highlight singular & countable nouns as a hint in "Regular" mode (these are the nodes around which article issues
 tend to cluster)
 
 -Add functionality for the user to specify number of errors to revise
 
--Move the app to be hosted on a VPS (Digital Ocean or AWS)
-
 -Add in a database to store texts, updated 1+ times daily (would scale better)
 
 -Change feedback to be presented using modals
 
--Clean up design (generally) and optimize for different screen sizes (eg, adding breakpoints)
+-Add breakpoints
