@@ -211,6 +211,9 @@ below is the academic CSS
   position: absolute;
 }
 
+.hl {
+  background-color: red;
+}
 
 /**********************************************************
 below is the business CSS
