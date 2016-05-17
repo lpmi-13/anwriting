@@ -185,31 +185,31 @@ textarea {
 }
 
 .btn {
-  font-size : 2.5vw;
-}
-
-h1 {
-  font-size : 3vw;
-}
-
-h2 {
   font-size : 2.6vw;
 }
 
+h1 {
+  font-size : 3.3vw;
+}
+
+h2 {
+  font-size : 3.1vw;
+}
+
 h3 {
-  font-size : 2.3vw;
+  font-size : 2.8vw;
 }
 
 p {
-  font-size : 2vw;
+  font-size : 2.5vw;
 }
 
 .form-group {
-  font-size : 2.3vw;
+  font-size : 2.5vw;
 }
 
 .list-group-item {
-  font-size : 2.8vw;
+  font-size : 3vw;
 }
 
 /**********************************************************
@@ -217,7 +217,7 @@ below is the academic CSS
 **********************************************************/
 
 .searching {
-  font-size: 2.6vw;
+  font-size: 3.3vw;
   margin: 15px;
 }
 
