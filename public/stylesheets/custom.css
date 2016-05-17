@@ -184,8 +184,9 @@ textarea {
   margin: 20px;
 }
 
-
-
+.btn {
+  font-size : 2vw;
+}
 
 /**********************************************************
 below is the academic CSS
