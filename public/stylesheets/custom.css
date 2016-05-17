@@ -62,7 +62,7 @@ body {
   color: #e6dae1;
   margin: 30px 0px 30px 0px;
   padding: 5px;
-  font-size: 22px;
+  /*font-size: 22px;*/
   list-style-type: none;
   list-style-position: left;
   text-align: left;
@@ -80,7 +80,7 @@ body {
   color: #e6dae1;
   margin: 0;
   padding: 5px;
-  font-size: 1.4em;
+  /*font-size: 1.4em;*/
  /* list-style-type: none;
   list-style-position: left;*/
   text-align: justify;
@@ -104,7 +104,7 @@ body {
   background-color: white;
   color: transparent;
   position: absolute;
-  font-size: 1.4em;
+  /*font-size: 1.4em;*/
   white-space: pre-wrap;
 }
 
@@ -120,7 +120,7 @@ textarea {
   color: black;
   background-color: transparent;
   position: absolute;
-  font-size: 1.4em;
+  /*font-size: 1.4em;*/
   z-index: 2;
   white-space: pre-wrap;
   text-align:justify;
@@ -180,36 +180,36 @@ textarea {
 .prompt {
   color : black;
   background-color: white;
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
   margin: 20px;
 }
 
 .btn {
-  font-size : 3.5vw;
+  font-size : 4.2vw;
 }
 
 h1 {
-  font-size : 4vw;
+  font-size : 5vw;
 }
 
 h2 {
-  font-size : 3.7vw;
+  font-size : 4.4vw;
 }
 
 h3 {
-  font-size : 3.5vw;
+  font-size : 4.1vw;
 }
 
 p {
-  font-size : 3.3vw;
+  font-size : 3.8vw;
 }
 
 .form-group {
-  font-size : 3.3vw;
+  font-size : 3.8vw;
 }
 
 .list-group-item {
-  font-size : 3.3vw;
+  font-size : 3.8vw;
 }
 
 /**********************************************************
@@ -217,7 +217,7 @@ below is the academic CSS
 **********************************************************/
 
 .searching {
-  font-size: 3.6vw;
+  font-size: 4vw;
   margin: 15px;
 }
 
@@ -225,7 +225,7 @@ below is the academic CSS
   color: #e6dae1;
   margin: 0;
   padding: 5px;
-  font-size: 1.4em;
+  /*font-size: 1.4em;*/
  /* list-style-type: none;
   list-style-position: left;*/
   text-align: justify;
@@ -245,7 +245,7 @@ below is the business CSS
 **********************************************************/
 
 .headline {
-  font-size: 1.2em;
+  /*font-size: 1.2em;*/
   margin: 20px;
 }
 
@@ -253,7 +253,7 @@ below is the business CSS
   color: #e6dae1;
   margin: 0;
   padding: 5px;
-  font-size: 1.4em;
+  /*font-size: 1.4em;*/
  /* list-style-type: none;
   list-style-position: left;*/
   text-align: justify;
