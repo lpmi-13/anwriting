@@ -188,6 +188,25 @@ textarea {
   font-size : 2.5vw;
 }
 
+h1 {
+  font-size : 3vw;
+}
+
+h2 {
+  font-size : 2.6vw;
+}
+
+h3 {
+  font-size : 2.3vw;
+}
+
+p {
+  font-size : 2vw;
+}
+
+.form-group {
+  font-size : 2.3vw;
+}
 /**********************************************************
 below is the academic CSS
 **********************************************************/
