@@ -23,7 +23,7 @@
     z-index: 90;
 }
 
-#custom-modal.ng-enter {
+/*#custom-modal.ng-enter {
   transition: opacity .5s ease-out;
   opacity: 0;
 }
@@ -36,7 +36,7 @@
 }
 #custom-modal.ng-leave.ng-leave-active {
   opacity: 0;
-}
+}*/
 
 body {
   font-family: Georgia;
@@ -45,95 +45,32 @@ body {
   color: #444;
 }
 
-.navbar-header {
-  margin-left: 10px;
+
+@media(min-width:768px) {
+  .navbar-header {
+    margin-left: 35px;
+  }
+
 }
 
-/*.btn-custom {
-  margin : 5%;
-  height : auto;
-  width : auto;
-  border-radius: 20px;
-  background-color: #87DEAF;
-  font-size: 4em;
+@media(max-width:767px) {
+  .navbar-header {
+    margin-left: 10px;
+  }
+}
+
+/*.text {
+  color: #e6dae1;
+  margin: 0;
+  padding: 5px;
+  font-size: 1.4em;
+  text-align: justify;
+  background-color: transparent;
+  color: black;
+  border-radius: 10px;
+  overflow: auto;
+  position: absolute;
 }*/
-
-.res {
-  color: #e6dae1;
-  margin: 30px 0px 30px 0px;
-  padding: 5px;
-  font-size: 22px;
-  list-style-type: none;
-  list-style-position: left;
-  text-align: left;
-  background-color: #104E8B;
-  border-radius: 10px;
-  overflow: auto;
-  width: 100%;
-}
-
-#boom {
-  display: none;
-}
-
-.story {
-  color: #e6dae1;
-  margin: 0;
-  padding: 5px;
-  font-size: 1.4em;
- /* list-style-type: none;
-  list-style-position: left;*/
-  text-align: justify;
-  background-color: transparent;
-  color: black;
-  border-radius: 10px;
-  overflow: auto;
-  position: absolute;
-}
-
-.smallZ {
-  margin: 0;
-  padding: 5px;
-  border-radius: 10px;
-  overflow: auto;
-  resize: none;
-  /*list-style-type: none;
-  list-style-position: left;*/
-  text-align: justify;
-  z-index: 1;
-  background-color: white;
-  color: transparent;
-  position: absolute;
-  font-size: 1.4em;
-  white-space: pre-wrap;
-}
-
-textarea {
-  resize: none;
-  transition: 0.05s;
-  -moz-transition: 0.05s;
-  -webkit-transition: 0.05s;
-  -o-transition: 0.05s;
-  margin: 0;
-  padding: 5px;
-  border-radius: 10px;
-  color: black;
-  background-color: transparent;
-  position: absolute;
-  font-size: 1.4em;
-  z-index: 2;
-  white-space: pre-wrap;
-  text-align:justify;
- }
-
- .backdrop {
-  position: absolute;
-  z-index: 1;
-  border: 2px solid #685972;
-  background-color: #fff;
-  margin:0;
-  border-radius: 0;
-}
 
 .container {
   display: block;
@@ -142,132 +79,163 @@ textarea {
   -webkit-text-size-adjust: none;
 }
 
-.bigger {
-  font-size: 2em;
- }
-
- .sides {
-  float: left;
-  margin: 5px 5px 5px 5px;
-  color: #E0FFFF;
- }
-
- .spacer {
-  position: fixed;
-  top: 10px;
-  z-index: 3;
-}
-
-.check {
-  font-size: 1.2em;
-  border-radius: 10px;
-}
-
-.hint {
-  font-size: 1.2em;
-  border-radius: 10px;
-}
-
-.back {
-  font-size: 1.2em;
-  border-radius: 10px;
-}
-
-.json {
-  margin: 25px;
-}
-
-.prompt {
-  color : black;
-  background-color: white;
-  font-size: 1.5em;
-  margin: 20px;
-}
-
-.btn {
-  font-size : 3.5vw;
-}
-
-h1 {
-  font-size : 4vw;
-}
-
-h2 {
-  font-size : 3.7vw;
-}
-
-h3 {
-  font-size : 3.5vw;
-}
-
-p {
-  font-size : 3.3vw;
-}
-
-.form-group {
-  font-size : 3.3vw;
-}
-
-.list-group-item {
-  font-size : 3.3vw;
-}
-
-/**********************************************************
-below is the academic CSS
-**********************************************************/
-
-.searching {
-  font-size: 3.6vw;
-  margin: 15px;
-}
-
-.summary {
-  color: #e6dae1;
-  margin: 0;
-  padding: 5px;
-  font-size: 1.4em;
- /* list-style-type: none;
-  list-style-position: left;*/
-  text-align: justify;
-  background-color: transparent;
-  color: black;
-  border-radius: 10px;
-  overflow: auto;
-  position: absolute;
-}
-
-.hl {
+ .hl {
   background-color: red;
 }
 
-/**********************************************************
-below is the business CSS
-**********************************************************/
+@media(max-width:767px){
 
-.headline {
-  font-size: 1.2em;
-  margin: 20px;
+  .btn {
+    font-size : 3.5vw;
+  }
+
+  h1 {
+    font-size : 4vw;
+  }
+
+  h2 {
+    font-size : 3.7vw;
+  }
+
+  h3 {
+    font-size : 3.5vw;
+  }
+
+  p {
+    font-size : 3.3vw;
+  }
+
+  .form-group {
+    font-size : 3.3vw;
+  }
+
+  .list-group-item {
+    font-size : 3.3vw;
+  }
+
+  .searching {
+    font-size: 3.6vw;
+    margin: 15px;
+  }
+
+  .prompt {
+    color : black;
+    background-color: white;
+    font-size: 1.5em;
+    margin: 10px;
+  }
+
+  .smallZ {
+    margin: 0;
+    padding: 5px;
+    border-radius: 10px;
+    overflow: auto;
+    resize: none;
+    /*list-style-type: none;
+    list-style-position: left;*/
+    text-align: justify;
+    z-index: 1;
+    background-color: white;
+    color: transparent;
+    position: absolute;
+    font-size: 3vw;
+    white-space: pre-wrap;
+  }
+
+  .text {
+    transition: 0.05s;
+    -moz-transition: 0.05s;
+    -webkit-transition: 0.05s;
+    -o-transition: 0.05s;
+    margin: 0;
+    padding: 5px;
+    border-radius: 10px;
+    resize: none;
+    text-align:justify;
+    z-index: 2;
+    background-color: transparent;
+    color: black;
+    position: absolute;
+    font-size: 3vw;
+    white-space: pre-wrap;
+  }
 }
 
-.article {
-  color: #e6dae1;
-  margin: 0;
-  padding: 5px;
-  font-size: 1.4em;
- /* list-style-type: none;
-  list-style-position: left;*/
-  text-align: justify;
-  background-color: transparent;
-  color: black;
-  border-radius: 10px;
-  overflow: auto;
-  position: absolute;
-}
+@media(min-width:768px){
 
-.homeScreen {
-  margin: 35px;
-}
+  .btn {
+    font-size : 2vw;
+  }
 
-.list {
-  margin: 35px;
+  h1 {
+    font-size : 3vw;
+  }
+
+  h2 {
+    font-size : 2.8vw;
+  }
+
+  h3 {
+    font-size : 2.5vw;
+  }
+
+  p {
+    font-size : 2.3vw;
+  }
+
+  .form-group {
+    font-size : 2.3vw;
+  }
+
+  .list-group-item {
+    font-size : 2.3vw;
+  }
+
+  .searching {
+    font-size: 2.3vw;
+    margin: 15px;
+  }
+
+  .prompt {
+    color : black;
+    background-color: white;
+    font-size: 2.6vw;
+    margin: 20px;
+  }
+
+  .smallZ {
+    margin: 0;
+    padding: 5px;
+    border-radius: 10px;
+    overflow: auto;
+    resize: none;
+    /*list-style-type: none;
+    list-style-position: left;*/
+    text-align: justify;
+    z-index: 0;
+    background-color: white;
+    color: transparent;
+    position: absolute;
+    font-size: 3vw;
+    white-space: pre-wrap;
+  }
+
+  .text {
+    transition: 0.05s;
+    -moz-transition: 0.05s;
+    -webkit-transition: 0.05s;
+    -o-transition: 0.05s;
+    margin: 0;
+    padding: 5px;
+    border-radius: 10px;
+    overflow: auto;
+    resize: none;
+    text-align:justify;
+    z-index: 10;
+    background-color: transparent;
+    color: black;
+    position: absolute;
+    font-size: 3vw;
+    white-space: pre-wrap;
+  }
 }
