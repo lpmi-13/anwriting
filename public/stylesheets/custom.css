@@ -121,7 +121,7 @@ body {
   .prompt {
     color : black;
     background-color: white;
-    font-size: 3.4vw;
+    font-size: 3.5vw;
     margin: 10px;
   }
 
@@ -138,7 +138,7 @@ body {
     background-color: white;
     color: transparent;
     position: absolute;
-    font-size: 3vw;
+    font-size: 3.5vw;
     white-space: pre-wrap;
   }
 
@@ -156,7 +156,7 @@ body {
     background-color: transparent;
     color: black;
     position: absolute;
-    font-size: 3vw;
+    font-size: 3.5vw;
     white-space: pre-wrap;
   }
 }
