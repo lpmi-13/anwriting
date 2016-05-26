@@ -224,13 +224,17 @@ app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl
 
         $scope.story = "LOADING STORY...";
 
-        $scope.amendedStory = "LOADING STORY..."
+        $scope.amendedStory = "LOADING STORY...";
 
         StoryList.get({id : $routeParams.id, url : $routeParams.url}, function(response) {
 
-            $scope.story = response.story;
+            $scope.story = response.story
+                                    .replace(/ a /gi, ' aaa ')
+                                    .replace(/ an /gi, ' an  ');
          
-            $scope.story_highlights = response.story;
+            $scope.story_highlights = response.story
+                                    .replace(/ a /gi, ' aaa ')
+                                    .replace(/ an /gi, ' an  ');
 
             $scope.amendedStory = response.story
                                     .replace(/ the /gi, ' *** ')
@@ -544,14 +548,18 @@ app.controller('EasyAcademicCtrl', ['$scope', '$location', '$routeParams', 'grow
 
         summary = summary.trimLeft();
 
-        $scope.summary = summary;
+        $scope.summary = summary
+                                .replace(/ a /gi, ' aaa ')
+                                .replace(/ an /gi, ' an  ');
 
         $scope.amendedSummary = summary
                                 .replace(/ the /gi, ' *** ')
                                 .replace(/ a /gi, ' *** ')
                                 .replace(/ an /gi, ' *** ');
         
-        $scope.summary_highlights = summary;
+        $scope.summary_highlights = summary
+                                .replace(/ a /gi, ' aaa ')
+                                .replace(/ an /gi, ' an  ');
 
         $scope.check = function() {
             var summaryArray = $scope.summary.toLowerCase().split(' ');
@@ -840,14 +848,18 @@ app.controller('EasyBusinessCtrl', ['$scope', '$location', '$routeParams', 'grow
         
             var text = response.response;
 
-            $scope.article = text;
+            $scope.article = text
+                                    .replace(/ a /gi, ' aaa ')
+                                    .replace(/ an /gi, ' an  ');
 
             $scope.amendedArticle = text
                                     .replace(/ the /gi, ' *** ')
                                     .replace(/ a /gi, ' *** ')
                                     .replace(/ an /gi, ' *** ');
             
-            $scope.article_highlights = text;
+            $scope.article_highlights = text
+                                    .replace(/ a /gi, ' aaa ')
+                                    .replace(/ an /gi, ' an  ');
 
         });
 

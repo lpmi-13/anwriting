@@ -79,10 +79,6 @@ body {
   -webkit-text-size-adjust: none;
 }
 
- .hl {
-  background-color: red;
-}
-
 @media(max-width:767px){
 
   .btn {
@@ -134,12 +130,16 @@ body {
     /*list-style-type: none;
     list-style-position: left;*/
     text-align: justify;
-    z-index: 1;
+    z-index: 0;
     background-color: white;
     color: transparent;
     position: absolute;
     font-size: 3.5vw;
     white-space: pre-wrap;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-family: "Courier New", Courier, monospace;
+    width: 100%;
   }
 
   .text {
@@ -150,14 +150,26 @@ body {
     margin: 0;
     padding: 5px;
     border-radius: 10px;
+    overflow: hidden;
     resize: none;
+    /*list-style-type: none;
+    list-style-position: left;*/
     text-align:justify;
-    z-index: 2;
+    z-index: 10;
     background-color: transparent;
     color: black;
     position: absolute;
     font-size: 3.5vw;
     white-space: pre-wrap;
+    width: 100%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-family: "Courier New", Courier, monospace;
+    width: 100%;    
+  }
+
+   .hl {
+  background-color: red;
   }
 }
 
@@ -206,36 +218,47 @@ body {
   .smallZ {
     margin: 0;
     padding: 5px;
-    border-radius: 10px;
-    overflow: auto;
+/*  border-radius: 10px;
+*/  overflow: hidden;
     resize: none;
-    /*list-style-type: none;
-    list-style-position: left;*/
-    text-align: justify;
+    list-style-type: none;
+    list-style-position: left;
+    text-align: left;
     z-index: 0;
     background-color: white;
-    color: transparent;
+    color: red;
     position: absolute;
     font-size: 3vw;
     white-space: pre-wrap;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-family: "Courier New", Courier, monospace;
+    width: 100%;
   }
 
   .text {
-    transition: 0.05s;
-    -moz-transition: 0.05s;
-    -webkit-transition: 0.05s;
-    -o-transition: 0.05s;
     margin: 0;
     padding: 5px;
-    border-radius: 10px;
-    overflow: auto;
+/*  border-radius: 10px;
+*/  overflow: hidden;
     resize: none;
-    text-align:justify;
+    list-style-type: none;
+    list-style-position: left;
+    text-align:left;
     z-index: 10;
     background-color: transparent;
     color: black;
     position: absolute;
     font-size: 3vw;
     white-space: pre-wrap;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-family: "Courier New", Courier, monospace;
+    width: 100%;
+  }
+
+   .hl {
+  background-color: red;
+  width: 2px;
   }
 }
