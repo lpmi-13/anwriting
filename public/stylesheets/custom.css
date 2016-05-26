@@ -124,17 +124,17 @@ body {
   .smallZ {
     margin: 0;
     padding: 5px;
-    border-radius: 10px;
-    overflow: auto;
+/*  border-radius: 10px;
+*/  overflow: hidden;
     resize: none;
-    /*list-style-type: none;
-    list-style-position: left;*/
-    text-align: justify;
+    list-style-type: none;
+    list-style-position: left;
+    text-align: left;
     z-index: 0;
     background-color: white;
-    color: transparent;
+    color: red;
     position: absolute;
-    font-size: 3.5vw;
+    font-size: 3vw;
     white-space: pre-wrap;
     letter-spacing: 1px;
     word-spacing: 2px;
@@ -143,33 +143,29 @@ body {
   }
 
   .text {
-    transition: 0.05s;
-    -moz-transition: 0.05s;
-    -webkit-transition: 0.05s;
-    -o-transition: 0.05s;
     margin: 0;
     padding: 5px;
-    border-radius: 10px;
-    overflow: hidden;
+/*  border-radius: 10px;
+*/  overflow: hidden;
     resize: none;
-    /*list-style-type: none;
-    list-style-position: left;*/
-    text-align:justify;
+    list-style-type: none;
+    list-style-position: left;
+    text-align:left;
     z-index: 10;
     background-color: transparent;
     color: black;
     position: absolute;
-    font-size: 3.5vw;
+    font-size: 3vw;
     white-space: pre-wrap;
-    width: 100%;
     letter-spacing: 1px;
     word-spacing: 2px;
     font-family: "Courier New", Courier, monospace;
-    width: 100%;    
+    width: 100%;
   }
 
    .hl {
   background-color: red;
+  width: 2px;
   }
 }
 
