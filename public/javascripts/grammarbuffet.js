@@ -228,18 +228,27 @@ app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl
 
         StoryList.get({id : $routeParams.id, url : $routeParams.url}, function(response) {
 
-            $scope.story = response.story
-                                    .replace(/ a /gi, ' aaa ')
-                                    .replace(/ an /gi, ' an  ');
+            $scope.story = response.story;
+
+            $scope.originalHighlights = response.story
+                                    .replace(/ a /g, ' aaa ')
+                                    .replace(/ an /g, ' aan ')
+                                    .replace(/ A /g, ' aaa ')
+                                    .replace(/ An /g, ' aan ');
          
             $scope.story_highlights = response.story
-                                    .replace(/ a /gi, ' aaa ')
-                                    .replace(/ an /gi, ' an  ');
+                                    .replace(/ a /g, ' aaa ')
+                                    .replace(/ an /g, ' aan ')
+                                    .replace(/ A /g, ' aaa ')
+                                    .replace(/ An /g, ' aan ');
 
             $scope.amendedStory = response.story
-                                    .replace(/ the /gi, ' *** ')
-                                    .replace(/ a /gi, ' *** ')
-                                    .replace(/ an /gi, ' *** ');
+                                    .replace(/ the /g, ' *** ')
+                                    .replace(/ a /g, ' *** ')
+                                    .replace(/ an /g, ' *** ')
+                                    .replace(/ The /g, ' *** ')
+                                    .replace(/ A /g, ' *** ')
+                                    .replace(/ An /g, ' *** ');
 
         });       
 
@@ -258,8 +267,8 @@ app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl
                 }
             }
 
-            console.log(storyArray);
-            console.log(amendedArray);
+            // console.log(storyArray);
+            // console.log(amendedArray);
 
             console.log('the final count of differences is ' + differenceCount);
             
@@ -281,22 +290,18 @@ app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl
         }
 
         $scope.getHint = function() {
-            var storyArray = $scope.story.toLowerCase().split(' ');
-            var amendedArray = $scope.amendedStory.toLowerCase().split(' ');
+            var storyArray = $scope.story.split(' ');
+            var amendedArray = $scope.amendedStory.split(' ');
 
+            // console.log(storyArray);
+            // console.log(amendedArray);
 
             var differenceCount = 0;
-
-            for (var i = 0; i < storyArray.length; i++) {
-                if (storyArray[i] !== amendedArray[i]) {
-                    differenceCount += 1;
-                }
-            }
-
             var differenceArray = [];
 
             for (var i = 0; i < storyArray.length; i++) {
                 if (storyArray[i] !== amendedArray[i]) {
+                    differenceCount += 1;
                     differenceArray.push(i);
                 }
             }
@@ -305,16 +310,16 @@ app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl
 
             function checkHighlights (originalArray, errorIndexArray) {
                 for (var i = 0; i < errorIndexArray.length; i++) {
-                    originalArray[errorIndexArray[i]] = '<span class="hl">   </span>'
+                    originalArray[errorIndexArray[i]] = '<span class="hl">***</span>'
                 }
-                console.log(originalArray);
-                var resultText = originalArray.join(',');
-                return resultText.replace(/,/g, ' ');
+                var resultText = originalArray.join(' ');
+                console.log(resultText);
+                return resultText;
             }
 
             growl.warning('...look near the RED marks', {title: 'We\'re still missing ' + differenceCount + ' things'});
 
-            setTimeout(function() {$scope.story_highlights = $scope.story}, 8000);
+            setTimeout(function() {$scope.story_highlights = $scope.originalHighlights}, 8000);
         }
 
         $scope.switchBool = function (value) {

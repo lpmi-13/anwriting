@@ -123,33 +123,25 @@ body {
 
   .smallZ {
     margin: 0;
-    padding: 5px;
-/*  border-radius: 10px;
-*/  overflow: hidden;
+    padding: 0 1.5rem 0 1.5rem;
+    overflow: hidden;
     resize: none;
-    list-style-type: none;
-    list-style-position: left;
     text-align: left;
     z-index: 0;
     background-color: white;
-    color: red;
+    color: transparent;
     position: absolute;
     font-size: 3vw;
     white-space: pre-wrap;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-family: "Courier New", Courier, monospace;
-    width: 100%;
+    font-family: Consolas, "Lucida Console", Monaco, monospace;
+    width: 99%;
   }
-
+  
   .text {
     margin: 0;
-    padding: 5px;
-/*  border-radius: 10px;
-*/  overflow: hidden;
+    padding: 0 1.5rem 0 1.5rem;
+    overflow: hidden;
     resize: none;
-    list-style-type: none;
-    list-style-position: left;
     text-align:left;
     z-index: 10;
     background-color: transparent;
@@ -157,15 +149,15 @@ body {
     position: absolute;
     font-size: 3vw;
     white-space: pre-wrap;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-family: "Courier New", Courier, monospace;
-    width: 100%;
+    font-family: Consolas, "Lucida Console", Monaco, monospace;
+    width: 99%;
   }
 
    .hl {
   background-color: red;
-  width: 2px;
+  white-space: pre-wrap;
+  margin: 0;
+  padding: 0;
   }
 }
 
@@ -213,33 +205,27 @@ body {
 
   .smallZ {
     margin: 0;
-    padding: 5px;
-/*  border-radius: 10px;
-*/  overflow: hidden;
+    padding: 0 1.5rem 0 1.5rem;
+    border-radius: 10px;
+    overflow: auto;
     resize: none;
-    list-style-type: none;
-    list-style-position: left;
     text-align: left;
     z-index: 0;
     background-color: white;
-    color: red;
+    color: transparent;
     position: absolute;
     font-size: 3vw;
     white-space: pre-wrap;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-family: "Courier New", Courier, monospace;
-    width: 100%;
+    font-family: Consolas, "Lucida Console", Monaco, monospace;
+    width: 99%;
   }
 
   .text {
     margin: 0;
-    padding: 5px;
-/*  border-radius: 10px;
-*/  overflow: hidden;
+    padding: 0 1.5rem 0 1.5rem;
+    border-radius: 10px;
+    overflow: auto;
     resize: none;
-    list-style-type: none;
-    list-style-position: left;
     text-align:left;
     z-index: 10;
     background-color: transparent;
@@ -247,14 +233,14 @@ body {
     position: absolute;
     font-size: 3vw;
     white-space: pre-wrap;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-family: "Courier New", Courier, monospace;
-    width: 100%;
+    font-family: Consolas, "Lucida Console", Monaco, monospace;
+    width: 99%;
   }
 
    .hl {
   background-color: red;
-  width: 2px;
+  white-space: pre-wrap;
+  margin: 0;
+  padding: 0;
   }
 }
