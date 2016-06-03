@@ -256,9 +256,6 @@ app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl
             var storyArray = $scope.story.toLowerCase().split(' ');
             var amendedArray = $scope.amendedStory.toLowerCase().split(' ');
 
-            console.log('the length of the original is ' + storyArray.length);
-            console.log('the length of the amended is ' + amendedArray.length);
-
             var differenceCount = 0;
 
             for (var i = 0; i < storyArray.length; i++) {
@@ -266,9 +263,6 @@ app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl
                     differenceCount += 1;
                 }
             }
-
-            // console.log(storyArray);
-            // console.log(amendedArray);
 
             console.log('the final count of differences is ' + differenceCount);
             
@@ -293,9 +287,6 @@ app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl
             var storyArray = $scope.story.split(' ');
             var amendedArray = $scope.amendedStory.split(' ');
 
-            // console.log(storyArray);
-            // console.log(amendedArray);
-
             var differenceCount = 0;
             var differenceArray = [];
 
@@ -313,7 +304,6 @@ app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl
                     originalArray[errorIndexArray[i]] = '<span class="hl">***</span>'
                 }
                 var resultText = originalArray.join(' ');
-                console.log(resultText);
                 return resultText;
             }
 
@@ -368,6 +358,8 @@ app.controller('RegularFictionCtrl', ['$scope', '$resource', '$location', '$rout
                                     .replace(/ An /g, ' ');
 
             $scope.story_highlights = response.story;
+
+            console.log(response.pos);
 
         });       
     
@@ -553,22 +545,32 @@ app.controller('EasyAcademicCtrl', ['$scope', '$location', '$routeParams', 'grow
 
         summary = summary.trimLeft();
 
-        $scope.summary = summary
-                                .replace(/ a /gi, ' aaa ')
-                                .replace(/ an /gi, ' an  ');
+        $scope.summary = summary;
 
-        $scope.amendedSummary = summary
-                                .replace(/ the /gi, ' *** ')
-                                .replace(/ a /gi, ' *** ')
-                                .replace(/ an /gi, ' *** ');
-        
+        $scope.originalHighlights = summary
+                                .replace(/ a /g, ' aaa ')
+                                .replace(/ an /g, ' aan ')
+                                .replace(/ A /g, ' aaa ')
+                                .replace(/ An /g, ' aan ');
+                                
         $scope.summary_highlights = summary
-                                .replace(/ a /gi, ' aaa ')
-                                .replace(/ an /gi, ' an  ');
+                                .replace(/ a /g, ' aaa ')
+                                .replace(/ an /g, ' aan ')
+                                .replace(/ A /g, ' aaa ')
+                                .replace(/ An /g, ' aan ');
+       
+        $scope.amendedSummary = summary
+                                .replace(/ the /g, ' *** ')
+                                .replace(/ a /g, ' *** ')
+                                .replace(/ an /g, ' *** ')
+                                .replace(/ The /g, ' *** ')
+                                .replace(/ A /g, ' *** ')
+                                .replace(/ An /g, ' *** ');
+        
 
         $scope.check = function() {
-            var summaryArray = $scope.summary.toLowerCase().split(' ');
-            var amendedSummaryArray = $scope.amendedSummary.toLowerCase().split(' ');
+            var summaryArray = $scope.summary.split(' ');
+            var amendedSummaryArray = $scope.amendedSummary.split(' ');
 
             var differenceCount = 0;
 
@@ -598,8 +600,8 @@ app.controller('EasyAcademicCtrl', ['$scope', '$location', '$routeParams', 'grow
         }
 
         $scope.getHint = function() {
-            var summaryArray = $scope.summary.toLowerCase().split(' ');
-            var amendedSummaryArray = $scope.amendedSummary.toLowerCase().split(' ');
+            var summaryArray = $scope.summary.split(' ');
+            var amendedSummaryArray = $scope.amendedSummary.split(' ');
 
 
             var differenceCount = 0;
@@ -622,16 +624,15 @@ app.controller('EasyAcademicCtrl', ['$scope', '$location', '$routeParams', 'grow
 
             function checkHighlights (originalArray, errorIndexArray) {
                 for (var i = 0; i < errorIndexArray.length; i++) {
-                    originalArray[errorIndexArray[i]] = '<span class="hl">   </span>'
+                    originalArray[errorIndexArray[i]] = '<span class="hl">***</span>'
                 }
-                console.log(originalArray);
-                var resultText = originalArray.join(',');
-                return resultText.replace(/,/g, ' ');
+                var resultText = originalArray.join(' ');
+                return resultText;
             }
 
             growl.warning('...look near the red marks', {title: 'We\'re still missing ' + differenceCount + ' things'});
 
-            setTimeout(function() {$scope.summary_highlights = $scope.summary}, 8000);
+            setTimeout(function() {$scope.summary_highlights = $scope.originalHighlights}, 8000);
         }
 
 }]);
@@ -663,12 +664,12 @@ app.controller('RegularAcademicCtrl', ['$scope', '$resource', '$location', '$rou
         $scope.summary = summary;
 
         $scope.amendedSummary = summary
-                                .replace(/ the /gi, ' ')
-                                .replace(/ a /gi, ' ')
-                                .replace(/ an /gi, ' ')
-                                .replace(/ The /gi, ' ')
-                                .replace(/ A /gi, ' ')
-                                .replace(/ An /gi, ' ');
+                                .replace(/ the /g, ' ')
+                                .replace(/ a /g, ' ')
+                                .replace(/ an /g, ' ')
+                                .replace(/ The /g, ' ')
+                                .replace(/ A /g, ' ')
+                                .replace(/ An /g, ' ');
         
         $scope.summary_highlights = summary;
 
@@ -853,24 +854,33 @@ app.controller('EasyBusinessCtrl', ['$scope', '$location', '$routeParams', 'grow
         
             var text = response.response;
 
-            $scope.article = text
-                                    .replace(/ a /gi, ' aaa ')
-                                    .replace(/ an /gi, ' an  ');
+            $scope.article = text;
+                                  
+            $scope.originalHighlights = text
+                                    .replace(/ a /g, ' aaa ')
+                                    .replace(/ an /g, ' aan ')
+                                    .replace(/ A /g, ' aaa ')
+                                    .replace(/ An /g, ' aan ');  
+
+            $scope.article_highlights = text
+                                    .replace(/ a /g, ' aaa ')
+                                    .replace(/ an /g, ' aan ')
+                                    .replace(/ A /g, ' aaa ')
+                                    .replace(/ An /g, ' aan ');
 
             $scope.amendedArticle = text
-                                    .replace(/ the /gi, ' *** ')
-                                    .replace(/ a /gi, ' *** ')
-                                    .replace(/ an /gi, ' *** ');
-            
-            $scope.article_highlights = text
-                                    .replace(/ a /gi, ' aaa ')
-                                    .replace(/ an /gi, ' an  ');
+                                    .replace(/ the /g, ' *** ')
+                                    .replace(/ a /g, ' *** ')
+                                    .replace(/ an /g, ' *** ')
+                                    .replace(/ The /g, ' *** ')
+                                    .replace(/ A /g, ' *** ')
+                                    .replace(/ An /g, ' *** ');
 
         });
 
         $scope.check = function() {
-            var articleArray = $scope.article.toLowerCase().split(' ');
-            var amendedArticleArray = $scope.amendedArticle.toLowerCase().split(' ');
+            var articleArray = $scope.article.split(' ');
+            var amendedArticleArray = $scope.amendedArticle.split(' ');
 
             var differenceCount = 0;
 
@@ -900,8 +910,8 @@ app.controller('EasyBusinessCtrl', ['$scope', '$location', '$routeParams', 'grow
         }
 
         $scope.getHint = function() {
-            var articleArray = $scope.article.toLowerCase().split(' ');
-            var amendedArticleArray = $scope.amendedArticle.toLowerCase().split(' ');
+            var articleArray = $scope.article.split(' ');
+            var amendedArticleArray = $scope.amendedArticle.split(' ');
 
 
             var differenceCount = 0;
@@ -924,16 +934,16 @@ app.controller('EasyBusinessCtrl', ['$scope', '$location', '$routeParams', 'grow
 
             function checkHighlights (originalArray, errorIndexArray) {
                 for (var i = 0; i < errorIndexArray.length; i++) {
-                    originalArray[errorIndexArray[i]] = '<span class="hl">   </span>'
+                    originalArray[errorIndexArray[i]] = '<span class="hl">***</span>'
                 }
                 console.log(originalArray);
-                var resultText = originalArray.join(',');
-                return resultText.replace(/,/g, ' ');
+                var resultText = originalArray.join(' ');
+                return resultText;
             }
 
             growl.warning('...look near the red marks', {title: 'We\'re still missing ' + differenceCount + ' things'});
 
-            setTimeout(function() {$scope.article_highlights = $scope.article}, 8000);
+            setTimeout(function() {$scope.article_highlights = $scope.originalHighlights}, 8000);
         }
 
 }]);
@@ -969,12 +979,12 @@ app.controller('RegularBusinessCtrl', ['$scope', '$resource', '$location', '$rou
             $scope.article = text;
 
             $scope.amendedArticle = text
-                                    .replace(/ the /gi, ' ')
-                                    .replace(/ a /gi, ' ')
-                                    .replace(/ an /gi, ' ')
-                                    .replace(/ The /gi, ' ')
-                                    .replace(/ A /gi, ' ')
-                                    .replace(/ An /gi, ' ');  
+                                    .replace(/ the /g, ' ')
+                                    .replace(/ a /g, ' ')
+                                    .replace(/ an /g, ' ')
+                                    .replace(/ The /g, ' ')
+                                    .replace(/ A /g, ' ')
+                                    .replace(/ An /g, ' ');  
 
             $scope.article_highlights = text;
 

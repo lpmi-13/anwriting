@@ -23,6 +23,11 @@
     z-index: 90;
 }
 
+.radio {
+  display: inline;
+  margin: 0 2em 0 2em;
+}
+
 /*#custom-modal.ng-enter {
   transition: opacity .5s ease-out;
   opacity: 0;
@@ -40,7 +45,7 @@
 
 body {
   font-family: Georgia;
-  padding-top: 70px;
+  padding-top: 5em;
   background-color: #A8CCFF;
   color: #444;
 }
@@ -48,29 +53,16 @@ body {
 
 @media(min-width:768px) {
   .navbar-header {
-    margin-left: 35px;
+    margin-left: 3em;
   }
 
 }
 
 @media(max-width:767px) {
   .navbar-header {
-    margin-left: 10px;
+    margin-left: 2em;
   }
 }
-
-/*.text {
-  color: #e6dae1;
-  margin: 0;
-  padding: 5px;
-  font-size: 1.4em;
-  text-align: justify;
-  background-color: transparent;
-  color: black;
-  border-radius: 10px;
-  overflow: auto;
-  position: absolute;
-}*/
 
 .container {
   display: block;
@@ -82,48 +74,49 @@ body {
 @media(max-width:767px){
 
   .btn {
-    font-size : 3.5vw;
+    font-size : 3.5rem;
   }
 
   h1 {
-    font-size : 4vw;
+    font-size : 4rem;
   }
 
   h2 {
-    font-size : 3.7vw;
+    font-size : 3.7rem;
   }
 
   h3 {
-    font-size : 3.5vw;
+    font-size : 3.5rem;
   }
 
   p {
-    font-size : 3.3vw;
+    font-size : 3.3rem;
   }
 
   .form-group {
-    font-size : 3.3vw;
+    font-size : 3.3rem;
   }
 
   .list-group-item {
-    font-size : 3.3vw;
+    font-size : 3.3rem;
   }
 
   .searching {
-    font-size: 3.6vw;
-    margin: 15px;
+    font-size: 3.6rem;
+    margin: 1.5em;
   }
 
   .prompt {
     color : black;
     background-color: white;
-    font-size: 3.5vw;
-    margin: 10px;
+    font-size: 3.5rem;
+    margin: 1em;
   }
 
   .smallZ {
     margin: 0;
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 1.5em 0 1.5em;
+    border-radius: 1em;
     overflow: hidden;
     resize: none;
     text-align: left;
@@ -131,7 +124,7 @@ body {
     background-color: white;
     color: transparent;
     position: absolute;
-    font-size: 3vw;
+    font-size: 3rem;
     white-space: pre-wrap;
     font-family: Consolas, "Lucida Console", Monaco, monospace;
     width: 99%;
@@ -139,7 +132,8 @@ body {
   
   .text {
     margin: 0;
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 1.5em 0 1.5em;
+    border-radius: 1em;
     overflow: hidden;
     resize: none;
     text-align:left;
@@ -147,7 +141,7 @@ body {
     background-color: transparent;
     color: black;
     position: absolute;
-    font-size: 3vw;
+    font-size: 3rem;
     white-space: pre-wrap;
     font-family: Consolas, "Lucida Console", Monaco, monospace;
     width: 99%;
@@ -164,49 +158,49 @@ body {
 @media(min-width:768px){
 
   .btn {
-    font-size : 2vw;
+    font-size : 2rem;
   }
 
   h1 {
-    font-size : 3vw;
+    font-size : 3rem;
   }
 
   h2 {
-    font-size : 2.8vw;
+    font-size : 2.8rem;
   }
 
   h3 {
-    font-size : 2.5vw;
+    font-size : 2.5rem;
   }
 
   p {
-    font-size : 2.3vw;
+    font-size : 2.3rem;
   }
 
   .form-group {
-    font-size : 2.3vw;
+    font-size : 2.3rem;
   }
 
   .list-group-item {
-    font-size : 2.3vw;
+    font-size : 2.3rem;
   }
 
   .searching {
-    font-size: 2.3vw;
-    margin: 15px;
+    font-size: 2.3rem;
+    margin: 1.5em;
   }
 
   .prompt {
     color : black;
     background-color: white;
-    font-size: 2.6vw;
-    margin: 20px;
+    font-size: 2.6rem;
+    margin: 2em;
   }
 
   .smallZ {
     margin: 0;
-    padding: 0 1.5rem 0 1.5rem;
-    border-radius: 10px;
+    padding: 0 1.5em 0 1.5em;
+    border-radius: 1em;
     overflow: auto;
     resize: none;
     text-align: left;
@@ -214,7 +208,7 @@ body {
     background-color: white;
     color: transparent;
     position: absolute;
-    font-size: 3vw;
+    font-size: 3rem;
     white-space: pre-wrap;
     font-family: Consolas, "Lucida Console", Monaco, monospace;
     width: 99%;
@@ -222,8 +216,8 @@ body {
 
   .text {
     margin: 0;
-    padding: 0 1.5rem 0 1.5rem;
-    border-radius: 10px;
+    padding: 0 1.5em 0 1.5em;
+    border-radius: 1em;
     overflow: auto;
     resize: none;
     text-align:left;
@@ -231,7 +225,7 @@ body {
     background-color: transparent;
     color: black;
     position: absolute;
-    font-size: 3vw;
+    font-size: 3rem;
     white-space: pre-wrap;
     font-family: Consolas, "Lucida Console", Monaco, monospace;
     width: 99%;
