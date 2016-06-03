@@ -54,31 +54,31 @@ body {
 @media(max-width:767px){
 
   .navbar-header {
-    margin-left: 2em;
+    margin-left: 1em;
   }
 
   body {
-    padding-top: 2em;
+    padding-top: 2.5em;
   }
 
   .btn {
-    font-size : 1rem;
+    font-size : 1.2rem;
   }
 
   h1 {
-    font-size : 2.7rem;
-  }
-
-  h2 {
-    font-size : 2.4rem;
-  }
-
-  h3 {
     font-size : 2.2rem;
   }
 
-  p {
+  h2 {
     font-size : 2rem;
+  }
+
+  h3 {
+    font-size : 1.8rem;
+  }
+
+  p {
+    font-size : 1.4rem;
   }
 
   .radio {
@@ -87,22 +87,22 @@ body {
   }
 
   .form-group {
-    font-size : 2rem;
+    font-size : 1.4rem;
   }
 
   .list-group-item {
-    font-size : 2rem;
+    font-size : 1.4rem;
   }
 
   .searching {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 1.5em;
   }
 
   .prompt {
     color : black;
     background-color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1em;
   }
 
@@ -117,7 +117,7 @@ body {
     background-color: white;
     color: transparent;
     position: absolute;
-    font-size: 2rem;
+    font-size: 1.2rem;
     white-space: pre-wrap;
     font-family: Consolas, "Lucida Console", Monaco, monospace;
     width: 99%;
@@ -134,7 +134,7 @@ body {
     background-color: transparent;
     color: black;
     position: absolute;
-    font-size: 2rem;
+    font-size: 1.2rem;
     white-space: pre-wrap;
     font-family: Consolas, "Lucida Console", Monaco, monospace;
     width: 99%;
