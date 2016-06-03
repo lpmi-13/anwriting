@@ -107,7 +107,7 @@ body {
   }
 
   .smallZ {
-    margin: 0 0.5em 0 0;
+    margin-right: 8em;
     padding: 0 1.5em 0 1.5em;
     border-radius: 1em;
     overflow: hidden;
@@ -124,7 +124,7 @@ body {
   }
   
   .text {
-    margin: 0 0.5em 0 0;
+    margin-right: 8em;
     padding: 0 1.5em 0 1.5em;
     border-radius: 1em;
     overflow: hidden;
