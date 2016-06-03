@@ -1,5 +1,5 @@
 
-#overlay {
+/*#overlay {
     position: fixed;
     left: 25%;
     top: 25%;
@@ -21,12 +21,7 @@
     width: 100%;
     height: 100%;
     z-index: 90;
-}
-
-.radio {
-  display: inline;
-  margin: 0 2em 0 2em;
-}
+}*/
 
 /*#custom-modal.ng-enter {
   transition: opacity .5s ease-out;
@@ -45,23 +40,8 @@
 
 body {
   font-family: Georgia;
-  padding-top: 5em;
   background-color: #A8CCFF;
   color: #444;
-}
-
-
-@media(min-width:768px) {
-  .navbar-header {
-    margin-left: 3em;
-  }
-
-}
-
-@media(max-width:767px) {
-  .navbar-header {
-    margin-left: 2em;
-  }
 }
 
 .container {
@@ -73,43 +53,57 @@ body {
 
 @media(max-width:767px){
 
+  .navbar-header {
+    margin-left: 3em;
+
+  }
+
+  body {
+    padding-top: 2em;
+  }
+
   .btn {
-    font-size : 3.5rem;
+    font-size : 1.4rem;
   }
 
   h1 {
-    font-size : 4rem;
+    font-size : 3rem;
   }
 
   h2 {
-    font-size : 3.7rem;
+    font-size : 2.7rem;
   }
 
   h3 {
-    font-size : 3.5rem;
+    font-size : 2.4rem;
   }
 
   p {
-    font-size : 3.3rem;
+    font-size : 2.2rem;
+  }
+
+  .radio {
+    display: inline;
+    margin: 0 1.2em 0 1.2em;
   }
 
   .form-group {
-    font-size : 3.3rem;
+    font-size : 2.3rem;
   }
 
   .list-group-item {
-    font-size : 3.3rem;
+    font-size : 2.3rem;
   }
 
   .searching {
-    font-size: 3.6rem;
+    font-size: 2.6rem;
     margin: 1.5em;
   }
 
   .prompt {
     color : black;
     background-color: white;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin: 1em;
   }
 
@@ -124,7 +118,7 @@ body {
     background-color: white;
     color: transparent;
     position: absolute;
-    font-size: 3rem;
+    font-size: 2.4rem;
     white-space: pre-wrap;
     font-family: Consolas, "Lucida Console", Monaco, monospace;
     width: 99%;
@@ -141,7 +135,7 @@ body {
     background-color: transparent;
     color: black;
     position: absolute;
-    font-size: 3rem;
+    font-size: 2.4rem;
     white-space: pre-wrap;
     font-family: Consolas, "Lucida Console", Monaco, monospace;
     width: 99%;
@@ -156,6 +150,14 @@ body {
 }
 
 @media(min-width:768px){
+
+  .navbar-header {
+    margin-left: 2em;
+  }
+
+  body {
+    padding-top: 3em;
+  }
 
   .btn {
     font-size : 2rem;
@@ -175,6 +177,11 @@ body {
 
   p {
     font-size : 2.3rem;
+  }
+
+  .radio {
+    display: inline;
+    margin: 0 2em 0 2em;
   }
 
   .form-group {
