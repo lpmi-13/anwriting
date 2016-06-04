@@ -7,7 +7,6 @@ body {
 
 .container {
   display: block;
-  margin: 1.2em;
   transform: translateZ(0);
   -webkit-text-size-adjust: none;
 }
@@ -73,6 +72,10 @@ h1,h2,h3,p {
 
 @media(max-width:767px){
 
+  .container {
+    margin: 0.5em;
+  }
+
   .navbar-header {
     margin-left: 1em;
   }
@@ -109,7 +112,7 @@ h1,h2,h3,p {
   .prompt {
     font-size: 1.5rem;
     line-height: 2.25rem;
-    margin: 0.2em;
+    margin: 0.5em 0 0.5em 0;
   }
   
   .text, .smallZ {
@@ -123,6 +126,10 @@ h1,h2,h3,p {
 }
 
 @media(min-width:768px){
+
+  .container {
+    margin: 1.2em;
+  }
 
   .navbar-header {
     margin-left: 2em;
