@@ -20,8 +20,6 @@ p {
   color : #363746;
   background-color: #f8f9fa;
   border-radius: .25em;
-  min-width: 45ch;
-  max-width: 70ch;
 }
 
 .searching {
