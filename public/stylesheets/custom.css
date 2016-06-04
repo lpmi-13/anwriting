@@ -1,54 +1,72 @@
 
-/*#overlay {
-    position: fixed;
-    left: 25%;
-    top: 25%;
-    padding: 25px;
-    border: 2px solid black;
-    background-color: #ffffff;
-    width: 50%;
-    height: 50%;
-    z-index: 100;
-}
-#fade {
-    position: fixed;
-    left: 0%;
-    top: 0%;
-    background-color: black;
-    -moz-opacity: 0.7;
-    opacity: .70;
-    filter: alpha(opacity=70);
-    width: 100%;
-    height: 100%;
-    z-index: 90;
-}*/
-
-/*#custom-modal.ng-enter {
-  transition: opacity .5s ease-out;
-  opacity: 0;
-}
-#custom-modal.ng-enter.ng-enter-active {
-  opacity: 1;
-}
-#custom-modal.ng-leave {
-  transition: opacity .5s ease-out;
-  opacity: 1;
-}
-#custom-modal.ng-leave.ng-leave-active {
-  opacity: 0;
-}*/
-
 body {
   font-family: Georgia;
-  background-color: #A8CCFF;
-  color: #444;
+  background-color: #3C45A2;
+  color: #f8f9fa;
 }
 
 .container {
   display: block;
-  margin: 0 auto;
+  margin: 1.2em;
   transform: translateZ(0);
   -webkit-text-size-adjust: none;
+}
+
+p {
+  font-family: Georgia;
+}
+
+.prompt {
+  color : #363746;
+  background-color: #f8f9fa;
+  border-radius: .25em;
+  min-width: 45ch;
+  max-width: 70ch;
+}
+
+.searching {
+  color: #363746;
+}
+
+h1,h2,h3,p {
+  color: #f8f9fa;
+}
+
+.link {
+  color: #EBBC3F;
+}
+
+.radio {
+  display: inline;
+}
+
+.text {
+  z-index: 10;
+  background-color: transparent;
+  color: #363746;
+}
+
+.smallZ {
+  z-index: 0;
+  background-color: #f8f9fa;
+  color: transparent;
+}
+
+.text, .smallZ{
+  overflow: hidden;
+  resize: none;
+  text-align:left;
+  position: absolute;
+  white-space: pre-wrap;
+  font-family: Consolas, "Lucida Console", Monaco, monospace;
+  width: 99%;
+}
+
+.hl {
+  background-color: #ebbc3f;
+  white-space: pre-wrap;
+  margin: 0;
+  padding: 0;
 }
 
 @media(max-width:767px){
@@ -61,91 +79,54 @@ body {
     padding-top: 2.5em;
   }
 
-  .btn {
-    font-size : 1.2rem;
-  }
-
   h1 {
     font-size : 2.2rem;
+    line-height: 3.3rem;
   }
 
   h2 {
     font-size : 2rem;
+    line-height: 3rem;
   }
 
   h3 {
     font-size : 1.8rem;
+    line-height: 2.7rem;
   }
-
-  p {
+ 
+  p, .form-group, .list-group-item {
     font-size : 1.4rem;
+    line-height: 2.1rem;
+  }
+ 
+  .btn {
+    font-size : 1.2rem;
   }
 
   .radio {
-    display: inline;
     margin: 0 1.2em 0 1.2em;
-  }
-
-  .form-group {
-    font-size : 1.4rem;
-  }
-
-  .list-group-item {
-    font-size : 1.4rem;
   }
 
   .searching {
     font-size: 1.6rem;
+    line-height: 2.4rem;
     margin: 1.5em;
   }
 
   .prompt {
-    color : black;
-    background-color: white;
     font-size: 1.5rem;
+    line-height: 2.25rem;
     margin: 0.5em;
   }
-
-  .smallZ {
-    margin-right: 8em;
-    padding: 0 1.5em 0 1.5em;
-    border-radius: 1em;
-    overflow: hidden;
-    resize: none;
-    text-align: left;
-    z-index: 0;
-    background-color: white;
-    color: transparent;
-    position: absolute;
-    font-size: 1.2rem;
-    white-space: pre-wrap;
-    font-family: Consolas, "Lucida Console", Monaco, monospace;
-    width: 99%;
-  }
   
-  .text {
-    margin-right: 8em;
+  .text, .smallZ {
+    margin: 0;
     padding: 0 1.5em 0 1.5em;
     border-radius: 1em;
-    overflow: hidden;
-    resize: none;
-    text-align:left;
-    z-index: 10;
-    background-color: transparent;
-    color: black;
-    position: absolute;
-    font-size: 1.2rem;
-    white-space: pre-wrap;
-    font-family: Consolas, "Lucida Console", Monaco, monospace;
-    width: 99%;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 
-   .hl {
-  background-color: red;
-  white-space: pre-wrap;
-  margin: 0;
-  padding: 0;
-  }
 }
 
 @media(min-width:768px){
@@ -158,89 +139,52 @@ body {
     padding-top: 3em;
   }
 
-  .btn {
-    font-size : 2rem;
-  }
-
   h1 {
     font-size : 3rem;
+    line-height: 4.5rem;
   }
 
   h2 {
     font-size : 2.8rem;
+    line-height: 4.2rem;
   }
 
   h3 {
     font-size : 2.5rem;
+    line-height: 3.75rem;
   }
 
-  p {
-    font-size : 2.3rem;
+  .btn {
+    font-size : 2rem;
   }
 
   .radio {
-    display: inline;
     margin: 0 2em 0 2em;
   }
 
-  .form-group {
+  p, .form-group, .list-group-item {
     font-size : 2.3rem;
-  }
-
-  .list-group-item {
-    font-size : 2.3rem;
+    line-height: 3.45rem;
   }
 
   .searching {
     font-size: 2.3rem;
+    line-height: 3.45rem;
     margin: 1.5em;
   }
 
   .prompt {
-    color : black;
-    background-color: white;
     font-size: 2.6rem;
+    line-height: 3.9rem;
     margin: 0.8em;
   }
 
-  .smallZ {
+  .text, .smallZ {
     margin: 0;
     padding: 0 1.5em 0 1.5em;
     border-radius: 1em;
-    overflow: auto;
-    resize: none;
-    text-align: left;
-    z-index: 0;
-    background-color: white;
-    color: transparent;
-    position: absolute;
     font-size: 3rem;
-    white-space: pre-wrap;
-    font-family: Consolas, "Lucida Console", Monaco, monospace;
-    width: 99%;
+    line-height: 4.5rem;
   }
 
-  .text {
-    margin: 0;
-    padding: 0 1.5em 0 1.5em;
-    border-radius: 1em;
-    overflow: auto;
-    resize: none;
-    text-align:left;
-    z-index: 10;
-    background-color: transparent;
-    color: black;
-    position: absolute;
-    font-size: 3rem;
-    white-space: pre-wrap;
-    font-family: Consolas, "Lucida Console", Monaco, monospace;
-    width: 99%;
-  }
-
-   .hl {
-  background-color: red;
-  white-space: pre-wrap;
-  margin: 0;
-  padding: 0;
-  }
 }

@@ -307,7 +307,7 @@ app.controller('EasyFictionCtrl', ['$scope', '$location', '$routeParams', 'growl
                 return resultText;
             }
 
-            growl.warning('...look near the RED marks', {title: 'We\'re still missing ' + differenceCount + ' things'});
+            growl.warning('...look near the HIGHLIGHT marks', {title: 'We\'re still missing ' + differenceCount + ' things'});
 
             setTimeout(function() {$scope.story_highlights = $scope.originalHighlights}, 8000);
         }
@@ -630,7 +630,7 @@ app.controller('EasyAcademicCtrl', ['$scope', '$location', '$routeParams', 'grow
                 return resultText;
             }
 
-            growl.warning('...look near the red marks', {title: 'We\'re still missing ' + differenceCount + ' things'});
+            growl.warning('...look near the HIGHLIGHT marks', {title: 'We\'re still missing ' + differenceCount + ' things'});
 
             setTimeout(function() {$scope.summary_highlights = $scope.originalHighlights}, 8000);
         }
@@ -941,7 +941,7 @@ app.controller('EasyBusinessCtrl', ['$scope', '$location', '$routeParams', 'grow
                 return resultText;
             }
 
-            growl.warning('...look near the red marks', {title: 'We\'re still missing ' + differenceCount + ' things'});
+            growl.warning('...look near the HIGHLIGHT marks', {title: 'We\'re still missing ' + differenceCount + ' things'});
 
             setTimeout(function() {$scope.article_highlights = $scope.originalHighlights}, 8000);
         }
