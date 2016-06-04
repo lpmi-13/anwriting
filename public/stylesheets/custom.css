@@ -86,14 +86,9 @@ h1,h2,h3,p {
     line-height: 2.1rem;
   }
 
-  h2 {
-    font-size : 1rem;
-    line-height: 1.5rem;
-  }
-
-  h3, .btn {
-    font-size : 0.85rem;
-    line-height: 1.275rem;
+  h2, h3, .btn {
+    font-size : 1.2rem;
+    line-height: 1.8rem;
   }
  
   p, .form-group, .list-group-item {
@@ -114,12 +109,12 @@ h1,h2,h3,p {
   .prompt {
     font-size: 1.5rem;
     line-height: 2.25rem;
-    margin: 0.5em;
+    margin: 0.2em;
   }
   
   .text, .smallZ {
     margin: 0;
-    padding: 0 1.5em 0 1.5em;
+    padding: 0 1em 0 1em;
     border-radius: 1em;
     font-size: 1.2rem;
     line-height: 1.8rem;
@@ -153,7 +148,7 @@ h1,h2,h3,p {
   }
 
   .btn {
-    font-size : 2rem;
+    font-size : 2.5rem;
   }
 
   .radio {
