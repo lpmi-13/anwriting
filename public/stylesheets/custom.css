@@ -32,6 +32,10 @@ h1,h2,h3,p {
   color: #f8f9fa;
 }
 
+.btn {
+  color: #363746;
+}
+
 .link {
   color: #EBBC3F;
 }
