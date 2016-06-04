@@ -82,18 +82,18 @@ h1,h2,h3,p {
   }
 
   h1 {
-    font-size : 1.8rem;
-    line-height: 2.7rem;
-  }
-
-  h2 {
     font-size : 1.4rem;
     line-height: 2.1rem;
   }
 
+  h2 {
+    font-size : 1rem;
+    line-height: 1.5rem;
+  }
+
   h3, .btn {
-    font-size : 1.2rem;
-    line-height: 1.8rem;
+    font-size : 0.85rem;
+    line-height: 1.275rem;
   }
  
   p, .form-group, .list-group-item {
