@@ -22,5 +22,3 @@ tend to cluster)
 -Add in a database to store texts, updated 1+ times daily (would scale better)
 
 -Change feedback to be presented using modals
-
--Add breakpoints
