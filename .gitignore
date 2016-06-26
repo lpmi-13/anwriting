@@ -1,4 +1,5 @@
 node_modules
 *.pdf
+*.txt
 Gruntfile.js
 gulpfile.js
