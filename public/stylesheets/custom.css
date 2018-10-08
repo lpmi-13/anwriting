@@ -1,7 +1,6 @@
-
 body {
   font-family: Georgia;
-  background-color: #3C45A2;
+  background-color: #3c45a2;
   color: #f8f9fa;
 }
 
@@ -16,16 +15,19 @@ p {
 }
 
 .prompt {
-  color : #363746;
+  color: #363746;
   background-color: #f8f9fa;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 
 .searching {
   color: #363746;
 }
 
-h1,h2,h3,p {
+h1,
+h2,
+h3,
+p {
   color: #f8f9fa;
 }
 
@@ -34,7 +36,7 @@ h1,h2,h3,p {
 }
 
 .link {
-  color: #EBBC3F;
+  color: #ebbc3f;
 }
 
 .radio {
@@ -53,13 +55,14 @@ h1,h2,h3,p {
   color: transparent;
 }
 
-.text, .smallZ{
+.text,
+.smallZ {
   overflow: hidden;
   resize: none;
-  text-align:left;
+  text-align: left;
   position: absolute;
   white-space: pre-wrap;
-  font-family: Consolas, "Lucida Console", Monaco, monospace;
+  font-family: Consolas, 'Lucida Console', Monaco, monospace;
   width: 99%;
 }
 
@@ -70,8 +73,7 @@ h1,h2,h3,p {
   padding: 0;
 }
 
-@media(max-width:767px){
-
+@media (max-width: 767px) {
   .container {
     margin: 0.5em;
   }
@@ -85,17 +87,21 @@ h1,h2,h3,p {
   }
 
   h1 {
-    font-size : 1.4rem;
+    font-size: 1.4rem;
     line-height: 2.1rem;
   }
 
-  h2, h3, .btn {
-    font-size : 1.2rem;
+  h2,
+  h3,
+  .btn {
+    font-size: 1.2rem;
     line-height: 1.8rem;
   }
- 
-  p, .form-group, .list-group-item {
-    font-size : 1.15rem;
+
+  p,
+  .form-group,
+  .list-group-item {
+    font-size: 1.15rem;
     line-height: 1.725rem;
   }
 
@@ -114,19 +120,18 @@ h1,h2,h3,p {
     line-height: 2.25rem;
     margin: 0.5em 0 0.5em 0;
   }
-  
-  .text, .smallZ {
+
+  .text,
+  .smallZ {
     margin: 0;
     padding: 0 1em 0 1em;
     border-radius: 1em;
     font-size: 1.2rem;
     line-height: 1.8rem;
   }
-
 }
 
-@media(min-width:768px){
-
+@media (min-width: 768px) {
   .container {
     margin: 1.2em;
   }
@@ -140,30 +145,32 @@ h1,h2,h3,p {
   }
 
   h1 {
-    font-size : 3rem;
+    font-size: 3rem;
     line-height: 4.5rem;
   }
 
   h2 {
-    font-size : 2.8rem;
+    font-size: 2.8rem;
     line-height: 4.2rem;
   }
 
   h3 {
-    font-size : 2.5rem;
+    font-size: 2.5rem;
     line-height: 3.75rem;
   }
 
   .btn {
-    font-size : 2.5rem;
+    font-size: 2.5rem;
   }
 
   .radio {
     margin: 0 2em 0 2em;
   }
 
-  p, .form-group, .list-group-item {
-    font-size : 2.3rem;
+  p,
+  .form-group,
+  .list-group-item {
+    font-size: 2.3rem;
     line-height: 3.45rem;
   }
 
@@ -179,12 +186,12 @@ h1,h2,h3,p {
     margin: 0.8em;
   }
 
-  .text, .smallZ {
+  .text,
+  .smallZ {
     margin: 0;
     padding: 0 1.5em 0 1.5em;
     border-radius: 1em;
     font-size: 3rem;
     line-height: 4.5rem;
   }
-
 }

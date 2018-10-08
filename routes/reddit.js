@@ -2,19 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 var request = require('request');
-var redditResponse = "";
-
+var redditResponse = '';
 
 router.get('/', function(req, res) {
+  var redditResponse = '';
 
-	var redditResponse = "";
-
-    	request('http://reddit.com/r/writingprompts.json', function (error, response, body) {
-    		if (!error) {
-    			redditResponse = body;
-    			return res.json(redditResponse);
-    		}
-    	});        
+  request('http://reddit.com/r/writingprompts.json', function(error, response, body) {
+    if (!error) {
+      redditResponse = body;
+      return res.json(redditResponse);
+    }
+  });
 });
 
 module.exports = router;
