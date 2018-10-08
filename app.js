@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var jade = require('jade');
 
 var routes = require('./routes/index');
-// var reddit = require('./routes/reddit');
 var stories = require('./routes/stories');
 var abstracts = require('./routes/abstracts');
 var articleList = require('./routes/articleList');

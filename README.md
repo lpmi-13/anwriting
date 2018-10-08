@@ -1,7 +1,7 @@
-#GrammarBuffet
+#AnWriting
 
 This is an expanded version of my previous two web apps which have essentially the same purpose: assisting ESL students in revising their own writing for articles.
-The primary difference between this effort and the two previous designs is that the "Regular" mode in Grammarbuffet presents the user
+The primary difference between this effort and the two previous designs is that the "Regular" mode in AnWriting presents the user
 with something that looks very similar to what they see when they try to revise something they've written: they don't necessarily have
 any explicit markers of where their errors are or what their errors are. In addition, this app presents the choice between three different
 genres (Business/Academic/Fiction), whereas previous attempts have focused on only one.
