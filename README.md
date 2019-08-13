@@ -1,4 +1,4 @@
-#AnWriting
+# AnWriting
 
 This is an expanded version of my previous two web apps which have essentially the same purpose: assisting ESL students in revising their own writing for articles.
 The primary difference between this effort and the two previous designs is that the "Regular" mode in AnWriting presents the user
@@ -12,15 +12,15 @@ they are missing (in "Regular" mode).
 
 Directions for future development
 
--Fix issues passing Academic texts via URLs (retrieving these from a DB as a long-term solution)
+- Fix issues passing Academic texts via URLs (retrieving these from a DB as a long- term solution)
 
--Add functionality to highlight singular & countable nouns as a hint in "Regular" mode (these are the nodes around which article issues
+- Add functionality to highlight singular & countable nouns as a hint in "Regular" mode (these are the nodes around which article issues
 tend to cluster)
 
--Add functionality for the user to specify number of errors to revise
+- Add functionality for the user to specify number of errors to revise
 
--Add in a database to store texts, updated 1+ times daily (would scale better)
+- Add in a database to store texts, updated 1+ times daily (would scale better)
 
--Change feedback to be presented using modals
+- Change feedback to be presented using modals
 
--Possibly add ability to add feedback on free text
+- Possibly add ability to add feedback on free text
