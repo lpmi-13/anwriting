@@ -5,7 +5,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 
 router.get('/', function(req, res) {
-  request('http://bbc.co.uk/news/business/', function(error, response, body) {
+  request('https://bbc.co.uk/news/business/', function(error, response, body) {
     if (!error) {
       $ = cheerio.load(body);
 

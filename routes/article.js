@@ -5,7 +5,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 
 router.get('/:url', function(req, res) {
-  var base = 'http://bbc.co.uk/news/';
+  var base = 'https://bbc.co.uk/news/';
   var url = req.params.url;
 
   request(base + url, function(error, response, body) {

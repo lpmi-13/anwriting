@@ -8,7 +8,7 @@ router.get('/:id/:url', function(req, res) {
   var id = req.params.id;
   var url = req.params.url;
 
-  request('http://reddit.com/r/writingprompts/comments/' + id + '/' + url + '/' + '.json', function(
+  request('https://reddit.com/r/writingprompts/comments/' + id + '/' + url + '/' + '.json', function(
     error,
     response,
     body

@@ -7,7 +7,7 @@ var redditResponse = '';
 router.get('/', function(req, res) {
   var redditResponse = '';
 
-  request('http://reddit.com/r/writingprompts.json', function(error, response, body) {
+  request('https://reddit.com/r/writingprompts.json', function(error, response, body) {
     if (!error) {
       redditResponse = body;
       return res.json(redditResponse);

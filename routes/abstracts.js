@@ -7,7 +7,7 @@ var parseString = require('xml2js').parseString;
 router.get('/:searchTerm', function(req, res) {
   var searchTerm = req.params.searchTerm;
 
-  request('http://export.arxiv.org/api/query?search_query=all:' + searchTerm + '&start=0&max_results=30', function(
+  request('https://export.arxiv.org/api/query?search_query=all:' + searchTerm + '&start=0&max_results=30', function(
     error,
     response,
     body
