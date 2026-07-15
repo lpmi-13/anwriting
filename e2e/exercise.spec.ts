@@ -4,7 +4,7 @@ import { expect, test } from '@playwright/test';
 test('opens the editorial studio with no detectable accessibility violations', async ({ page }) => {
   await page.goto('/');
 
-  await expect(page.getByRole('heading', { name: /make every small word count/i })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /make the small words count/i })).toBeVisible();
   await expect(page.getByRole('heading', { name: /three writing desks/i })).toBeVisible();
 
   const results = await new AxeBuilder({ page }).analyze();

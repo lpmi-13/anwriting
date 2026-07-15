@@ -241,29 +241,58 @@ main {
 }
 
 .hero h1 {
-  max-width: 12ch;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(4.6rem, 8.3vw, 8rem);
+  font-size: clamp(4.2rem, 7.2vw, 7.2rem);
   font-weight: 400;
   letter-spacing: -0.075em;
-  line-height: 0.82;
+  line-height: 0.9;
+  flex-direction: column;
 }
 
 .hero h1 em {
-  position: relative;
   color: var(--chartreuse);
   font-weight: 400;
 }
 
-.hero h1 em::after {
+.hero-title-line {
+  display: block;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.hero-title-lead {
+  display: flex;
+  align-items: baseline;
+}
+
+.hero-title-insert {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.22em;
+  color: var(--orange);
+  font-family: var(--sans);
+  font-size: 0.7em;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  transform: translateY(-0.08em) rotate(-6deg);
+}
+
+.hero-title-insert i {
   position: absolute;
-  right: -0.05em;
-  bottom: -0.05em;
-  left: 0.08em;
-  border-top: 3px solid var(--orange);
-  content: "";
-  transform: rotate(-2deg);
+  bottom: calc(100% + 0.04em);
+  left: 50%;
+  font-family: var(--sans);
+  font-size: 0.68em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  transform: translateX(-50%);
 }
 
 .hero-intro {
@@ -1567,7 +1596,8 @@ main {
   }
 
   .hero h1 {
-    font-size: clamp(3.65rem, 18vw, 5.6rem);
+    font-size: clamp(3.2rem, 16vw, 5.2rem);
+    line-height: 0.94;
   }
 
   .proof-preview {
