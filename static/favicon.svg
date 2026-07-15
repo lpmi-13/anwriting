@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">A(n)Writing</title>
+  <rect width="64" height="64" fill="#182924"/>
+  <path d="M15 46 27 17h6l12 29h-8l-2.2-6H24.6l-2.2 6Zm12-13h5.5L29.8 25Z" fill="#fffaf0"/>
+  <path d="M14 51c12-4 23-4 37-1" fill="none" stroke="#ff6844" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="48" cy="16" r="6" fill="#dbe876"/>
+</svg>

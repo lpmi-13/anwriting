@@ -1,26 +1,53 @@
-# AnWriting
+# A(n)Writing
 
-This is an expanded version of my previous two web apps which have essentially the same purpose: assisting ESL students in revising their own writing for articles.
-The primary difference between this effort and the two previous designs is that the "Regular" mode in AnWriting presents the user
-with something that looks very similar to what they see when they try to revise something they've written: they don't necessarily have
-any explicit markers of where their errors are or what their errors are. In addition, this app presents the choice between three different
-genres (Business/Academic/Fiction), whereas previous attempts have focused on only one.
+A(n)Writing is a self-contained, genre-based proofreading studio for learners who want to
+practise the English articles **a**, **an**, and **the**. It revives the original Express and
+AngularJS project as a fast, accessible TypeScript single-page app.
 
-This app uses real-time data from the BBC Business News site, Arxiv.org (an open-access repository of academic articles and abstracts), and Reddit,
-stripping the articles and asking the user to supply the original articles (on "Easy" mode) and insert articles where the user thinks
-they are missing (in "Regular" mode).
+## What changed
 
-Directions for future development
+- Replaced the retired Express/Jade/AngularJS/Bower stack with Vite and strict TypeScript.
+- Preserved the original Fiction, Academic, and Business writing choices.
+- Added two complete exercise modes:
+  - **Guided** shows every article gap as an inline choice.
+  - **Editor** removes all articles from an editable draft and grades their exact placements.
+- Added contextual hints, reset and reveal controls, progress saved in the browser, keyboard
+  support, responsive layouts, and accessible status feedback.
+- Replaced fragile BBC, arXiv, and Reddit scraping with an original built-in passage library, so
+  every mode works reliably on Netlify without a server, API key, or third-party outage.
+- Added unit, browser, accessibility, formatting, linting, and production-build checks.
 
-- Fix issues passing Academic texts via URLs (retrieving these from a DB as a long- term solution)
+## Local development
 
-- Add functionality to highlight singular & countable nouns as a hint in "Regular" mode (these are the nodes around which article issues
-tend to cluster)
+Use Node 24 (the required version is in `.nvmrc`), then run:
 
-- Add functionality for the user to specify number of errors to revise
+```bash
+npm install
+npm run dev
+```
 
-- Add in a database to store texts, updated 1+ times daily (would scale better)
+Useful checks:
 
-- Change feedback to be presented using modals
+```bash
+npm test
+npm run build
+npm run test:e2e
+npm run check
+```
 
-- Possibly add ability to add feedback on free text
+## Deploying to Netlify
+
+The repository includes `netlify.toml`. Create a Netlify site from the repository and accept the
+detected settings:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Node: `24.17.0`
+
+The catch-all redirect supports SPA URLs, while the response headers add a restrictive Content
+Security Policy and other production safeguards.
+
+## Licence
+
+Code is available under the [MIT licence](LICENSE.txt). Practice passages are original text written
+for A(n)Writing.

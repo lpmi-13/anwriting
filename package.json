@@ -1,21 +1,36 @@
 {
-  "name": "AnWriting",
-  "version": "0.0.1",
+  "name": "anwriting",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "description": "A genre-based English article proofreading studio.",
+  "author": "Adam Leskis",
+  "license": "MIT",
   "scripts": {
-    "start": "node ./bin/www"
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "check": "npm run lint && npm run test && npm run build && npm run format:check"
   },
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cheerio": "~0.20.0",
-    "cookie-parser": "^1.4.4",
-    "express": "^4.17.1",
-    "http": "0.0.0",
-    "jade": "^1.11.0",
-    "morgan": "^1.9.1",
-    "pos": "~0.3.0",
-    "request": "^2.88.0",
-    "serve-favicon": "^2.5.0",
-    "xml2js": "~0.4.16"
+  "engines": {
+    "node": ">=24.0.0 <25",
+    "npm": ">=11.6.1 <13"
+  },
+  "packageManager": "npm@12.0.1",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@biomejs/biome": "^2.5.3",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "jsdom": "^29.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.1.4",
+    "vitest": "^4.1.10"
   }
 }
